@@ -1,0 +1,20 @@
+lookback_days: 2
+max_results_per_topic: 50
+max_display_per_topic: 10
+openai:
+  enabled: true
+  model: gpt-4.1-mini
+
+topics:
+  - name: Statistical Physics
+    query: 'cat:cond-mat.stat-mech OR cat:cond-mat.dis-nn OR cat:physics.soc-ph OR all:"statistical physics" OR all:"non-equilibrium"'
+  - name: Quantum Computing
+    query: 'cat:quant-ph OR all:"quantum computing" OR all:"quantum algorithm" OR all:"quantum error correction"'
+  - name: Machine Learning
+    query: 'cat:cs.LG OR cat:stat.ML OR cat:cs.AI OR all:"machine learning" OR all:"deep learning"'
+  - name: DeepMind Researchers Watchlist
+    query: 'au:"David Silver" OR au:"Demis Hassabis" OR au:"Koray Kavukcuoglu" OR au:"Oriol Vinyals" OR au:"Petar Velickovic" OR au:"Nando de Freitas" OR au:"Pushmeet Kohli" OR au:"Yee Whye Teh" OR au:"Razvan Pascanu"'
+  - name: DeepMind Affiliation Keywords
+    query: 'all:"DeepMind" OR all:"Google DeepMind"'
+  - name: Top Experts Watchlist (Cross-domain)
+    query: 'au:"Yoshua Bengio" OR au:"Geoffrey Hinton" OR au:"Yann LeCun" OR au:"Michael I Jordan" OR au:"Richard Sutton" OR au:"Scott Aaronson" OR au:"John Preskill" OR au:"Peter Shor" OR au:"Seth Lloyd" OR au:"Subir Sachdev" OR au:"Giorgio Parisi"'
