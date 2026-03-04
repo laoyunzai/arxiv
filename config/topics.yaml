@@ -12,7 +12,7 @@ llm:
 
 topics:
   - name: Statistical Physics
-    query: 'cat:cond-mat.stat-mech OR cat:cond-mat.dis-nn OR cat:physics.soc-ph OR all:"statistical physics" OR all:"non-equilibrium"'
+    query: 'cat:cond-mat.stat-mech OR cat:cond-mat.dis-nn OR cat:physics.soc-ph OR cat:cond-mat.str-el OR all:"statistical physics" OR all:"non-equilibrium"'
   - name: Quantum Computing
     query: 'cat:quant-ph OR all:"quantum computing" OR all:"quantum algorithm" OR all:"quantum error correction"'
   - name: Machine Learning
