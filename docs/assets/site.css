@@ -226,6 +226,7 @@ body {
   flex-direction: column;
   gap: 10px;
   animation: rise 0.45s ease both;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -273,6 +274,10 @@ body {
   font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
   font-size: 18px;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .authors {
@@ -287,6 +292,10 @@ body {
   color: #1f3434;
   font-size: 14px;
   line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .links {
@@ -332,6 +341,110 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+.detail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 28;
+  display: grid;
+  place-items: center;
+}
+
+.detail-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 18, 18, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.detail-panel {
+  position: relative;
+  width: min(980px, 94vw);
+  max-height: 88vh;
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid #d9d3c4;
+  background: #fffdf8;
+  box-shadow: 0 24px 60px rgba(12, 20, 19, 0.28);
+  padding: 18px 18px 20px;
+}
+
+.detail-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.detail-topic {
+  margin: 0;
+  color: #0f6664;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.detail-header h2 {
+  margin: 6px 0 0;
+  font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+  font-size: clamp(20px, 2.3vw, 30px);
+  line-height: 1.35;
+}
+
+.detail-meta {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  color: #536a69;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.detail-actions {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-actions a,
+.detail-actions button {
+  border: 1px solid #c3d9d8;
+  border-radius: 10px;
+  background: #ecf7f7;
+  color: #125755;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.detail-actions button {
+  border-color: #adcac9;
+  background: #dff0ef;
+}
+
+.detail-section {
+  margin-top: 14px;
+  border-top: 1px solid #e1dbc9;
+  padding-top: 12px;
+}
+
+.detail-section h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.detail-section p {
+  margin: 0;
+  color: #1f3434;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
 }
 
 .pdf-modal {
@@ -452,5 +565,13 @@ body {
     width: 100vw;
     height: 100vh;
     border-radius: 0;
+  }
+
+  .detail-panel {
+    width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    padding: 14px 14px 18px;
   }
 }

@@ -64,6 +64,37 @@
       </section>
     </main>
 
+    <div id="detailModal" class="detail-modal hidden" role="dialog" aria-modal="true" aria-label="论文详情">
+      <div class="detail-backdrop" data-close-detail="1"></div>
+      <article class="detail-panel">
+        <header class="detail-header">
+          <div>
+            <p id="detailTopic" class="detail-topic"></p>
+            <h2 id="detailTitle"></h2>
+          </div>
+          <button id="closeDetail" class="icon-btn" aria-label="关闭详情">✕</button>
+        </header>
+        <div class="detail-meta">
+          <span id="detailDate"></span>
+          <span id="detailAuthors"></span>
+          <span id="detailId"></span>
+        </div>
+        <div class="detail-actions">
+          <a id="detailAbsLink" target="_blank" rel="noopener">原文链接</a>
+          <a id="detailPdfLink" target="_blank" rel="noopener">PDF 下载</a>
+          <button id="detailPreviewBtn" type="button">在页面预览 PDF</button>
+        </div>
+        <section class="detail-section">
+          <h3>中文总结</h3>
+          <p id="detailSummary"></p>
+        </section>
+        <section class="detail-section">
+          <h3>原始摘要</h3>
+          <p id="detailAbstract"></p>
+        </section>
+      </article>
+    </div>
+
     <div id="pdfModal" class="pdf-modal hidden" role="dialog" aria-modal="true" aria-label="PDF 预览">
       <div class="pdf-backdrop" data-close="1"></div>
       <div class="pdf-panel">

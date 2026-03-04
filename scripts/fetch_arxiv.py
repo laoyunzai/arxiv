@@ -7,7 +7,7 @@ import json
 import os
 import re
 from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -68,6 +68,27 @@ def fallback_summary(title: str, abstract: str, target_chars: int = 150) -> str:
         summary = summary[: max_len - 3].rstrip() + "..."
 
     return summary
+
+
+def is_chinese_dominant(text: str, min_ratio: float = 0.5, min_chars: int = 20) -> bool:
+    clean = normalize_text(text)
+    if not clean:
+        return False
+    chinese_count = len(re.findall(r"[\u4e00-\u9fff]", clean))
+    alpha_num_count = len(re.findall(r"[A-Za-z0-9]", clean))
+    if chinese_count < min_chars:
+        return False
+    total = chinese_count + alpha_num_count
+    if total == 0:
+        return False
+    return (chinese_count / total) >= min_ratio
+
+
+def force_chinese_placeholder(title: str) -> str:
+    clean_title = normalize_text(title)
+    if not clean_title:
+        clean_title = "该论文"
+    return f"论文《{clean_title}》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。"
 
 
 def to_iso_utc(dt: datetime) -> str:
@@ -170,9 +191,42 @@ def llm_summary(
         text = ""
         if response.choices and response.choices[0].message:
             text = normalize_text(response.choices[0].message.content or "")
-        return text if text else fallback_summary(title, abstract, target_chars=target_chars)
+        if not text:
+            text = fallback_summary(title, abstract, target_chars=target_chars)
+        if is_chinese_dominant(text):
+            return text
+
+        # Second pass: force Chinese rewrite when first response is not Chinese enough.
+        rewrite_prompt = (
+            f"请将下面这段论文总结严格改写为中文，长度约 {target_chars} 字（允许 ±30 字），"
+            "不要保留英文句子，不要分点，输出单段落。\n\n"
+            f"标题: {normalize_text(title)}\n"
+            f"原总结: {text}\n"
+            f"原始摘要: {normalize_text(abstract)}"
+        )
+        rewrite = client.chat.completions.create(
+            model=model,
+            temperature=0.2,
+            max_tokens=260,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "你只输出中文总结，不输出任何英文。",
+                },
+                {"role": "user", "content": rewrite_prompt},
+            ],
+        )
+        rewrite_text = ""
+        if rewrite.choices and rewrite.choices[0].message:
+            rewrite_text = normalize_text(rewrite.choices[0].message.content or "")
+        if rewrite_text and is_chinese_dominant(rewrite_text):
+            return rewrite_text
+        return force_chinese_placeholder(title)
     except Exception:
-        return fallback_summary(title, abstract, target_chars=target_chars)
+        fallback = fallback_summary(title, abstract, target_chars=target_chars)
+        if is_chinese_dominant(fallback):
+            return fallback
+        return force_chinese_placeholder(title)
 
 
 def load_summary_cache(path: Path) -> dict[str, Any]:
@@ -235,6 +289,11 @@ def save_summary_cache(path: Path, cache: dict[str, Any]) -> None:
     path.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def lookback_cutoff(now_utc: datetime, lookback_days: int) -> datetime:
+    base_day = (now_utc - timedelta(days=lookback_days)).date()
+    return datetime.combine(base_day, time.min, tzinfo=timezone.utc)
+
+
 def parse_entry(entry: dict[str, Any]) -> dict[str, Any]:
     links = [l.get("href", "") for l in entry.get("links", []) if l.get("href")]
     html_link = entry.get("link", "")
@@ -263,7 +322,7 @@ def fetch_topic_entries(
     page_size: int,
     max_results: int | None,
 ) -> list[dict[str, Any]]:
-    cutoff = now_utc - timedelta(days=lookback_days)
+    cutoff = lookback_cutoff(now_utc, lookback_days)
     start = 0
     papers: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
@@ -324,14 +383,6 @@ def fetch_topic_entries(
         start += len(entries)
 
     return papers
-
-
-def within_lookback(published: str, now_utc: datetime, lookback_days: int) -> bool:
-    pub_dt = parse_published_utc(published)
-    if pub_dt is None:
-        return False
-    cutoff = now_utc - timedelta(days=lookback_days)
-    return pub_dt >= cutoff
 
 
 def render_markdown(report: dict[str, Any]) -> str:

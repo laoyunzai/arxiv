@@ -18,6 +18,18 @@ const dom = {
   dateFromInput: document.getElementById("dateFromInput"),
   dateToInput: document.getElementById("dateToInput"),
   clearDateFilter: document.getElementById("clearDateFilter"),
+  detailModal: document.getElementById("detailModal"),
+  closeDetail: document.getElementById("closeDetail"),
+  detailTopic: document.getElementById("detailTopic"),
+  detailTitle: document.getElementById("detailTitle"),
+  detailDate: document.getElementById("detailDate"),
+  detailAuthors: document.getElementById("detailAuthors"),
+  detailId: document.getElementById("detailId"),
+  detailAbsLink: document.getElementById("detailAbsLink"),
+  detailPdfLink: document.getElementById("detailPdfLink"),
+  detailPreviewBtn: document.getElementById("detailPreviewBtn"),
+  detailSummary: document.getElementById("detailSummary"),
+  detailAbstract: document.getElementById("detailAbstract"),
   pdfModal: document.getElementById("pdfModal"),
   pdfFrame: document.getElementById("pdfFrame"),
   pdfTitle: document.getElementById("pdfTitle"),
@@ -199,7 +211,38 @@ function openPdfModal(paper) {
 function closePdfModal() {
   dom.pdfModal.classList.add("hidden");
   dom.pdfFrame.src = "about:blank";
-  document.body.style.overflow = "";
+  if (dom.detailModal.classList.contains("hidden")) {
+    document.body.style.overflow = "";
+  }
+}
+
+function openDetailModal(paper) {
+  dom.detailTopic.textContent = paper.topic_name || "-";
+  dom.detailTitle.textContent = paper.title || "Untitled";
+  dom.detailDate.textContent = `日期: ${toDateLabel(paper.published)}`;
+  dom.detailAuthors.textContent = `作者: ${(paper.authors || []).join(", ") || "-"}`;
+  dom.detailId.textContent = paper.id ? `arXiv: ${paper.id}` : "";
+  dom.detailSummary.textContent = paper.summary || "暂无摘要";
+  dom.detailAbstract.textContent = paper.abstract || "暂无原始摘要";
+
+  const absUrl = paper.html_url || "";
+  const pdfUrl = paper.pdf_url || "";
+  dom.detailAbsLink.href = absUrl || "#";
+  dom.detailAbsLink.style.display = absUrl ? "" : "none";
+  dom.detailPdfLink.href = pdfUrl || "#";
+  dom.detailPdfLink.style.display = pdfUrl ? "" : "none";
+  dom.detailPreviewBtn.style.display = pdfUrl ? "" : "none";
+  dom.detailPreviewBtn.onclick = () => openPdfModal(paper);
+
+  dom.detailModal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDetailModal() {
+  dom.detailModal.classList.add("hidden");
+  if (dom.pdfModal.classList.contains("hidden")) {
+    document.body.style.overflow = "";
+  }
 }
 
 function renderCards() {
@@ -217,6 +260,9 @@ function renderCards() {
     const card = document.createElement("article");
     card.className = "card";
     card.style.animationDelay = `${Math.min(index * 30, 320)}ms`;
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `${paper.title || "论文"} 详情`);
 
     const authors = (paper.authors || []).join(", ") || "-";
     const absUrl = paper.html_url || "";
@@ -247,8 +293,25 @@ function renderCards() {
 
     const previewButton = card.querySelector("[data-preview='1']");
     if (previewButton) {
-      previewButton.addEventListener("click", () => openPdfModal(paper));
+      previewButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        openPdfModal(paper);
+      });
     }
+
+    card.querySelectorAll("a").forEach((anchor) => {
+      anchor.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+    });
+
+    card.addEventListener("click", () => openDetailModal(paper));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openDetailModal(paper);
+      }
+    });
 
     dom.cards.appendChild(card);
   });
@@ -297,9 +360,24 @@ function bindEvents() {
     }
   });
 
+  dom.closeDetail.addEventListener("click", closeDetailModal);
+  dom.detailModal.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof HTMLElement && target.dataset.closeDetail === "1") {
+      closeDetailModal();
+    }
+  });
+
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !dom.pdfModal.classList.contains("hidden")) {
+    if (event.key !== "Escape") {
+      return;
+    }
+    if (!dom.pdfModal.classList.contains("hidden")) {
       closePdfModal();
+      return;
+    }
+    if (!dom.detailModal.classList.contains("hidden")) {
+      closeDetailModal();
     }
   });
 }
