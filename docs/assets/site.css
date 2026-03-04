@@ -144,6 +144,54 @@ body {
   flex-wrap: wrap;
 }
 
+.date-wrap {
+  grid-column: 1 / -1;
+}
+
+.date-fields {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.date-fields input[type="date"] {
+  border: 1px solid #c6bda9;
+  border-radius: 10px;
+  background: #fffdf8;
+  padding: 9px 10px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.date-fields input[type="date"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(21, 111, 109, 0.16);
+}
+
+.date-sep {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.clear-date-btn {
+  border: 1px solid #c8bfaa;
+  border-radius: 999px;
+  background: #fffaf0;
+  color: #4f6362;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.clear-date-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
 .topic-btn {
   border: 1px solid #c8bfaa;
   background: #fffaf0;
@@ -373,6 +421,16 @@ body {
   .toolbar {
     grid-template-columns: minmax(280px, 1.1fr) 1fr;
     align-items: end;
+  }
+}
+
+@media (min-width: 1120px) {
+  .toolbar {
+    grid-template-columns: minmax(280px, 1.1fr) minmax(260px, 1fr) minmax(280px, 1fr);
+  }
+
+  .date-wrap {
+    grid-column: auto;
   }
 }
 

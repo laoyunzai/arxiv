@@ -46,6 +46,15 @@
           <span class="topic-label">主题</span>
           <div id="topicTabs" class="topic-tabs"></div>
         </div>
+        <div class="date-wrap">
+          <span class="topic-label">日期筛选</span>
+          <div class="date-fields">
+            <input id="dateFromInput" type="date" aria-label="开始日期" />
+            <span class="date-sep">至</span>
+            <input id="dateToInput" type="date" aria-label="结束日期" />
+            <button id="clearDateFilter" type="button" class="clear-date-btn">清空</button>
+          </div>
+        </div>
       </section>
 
       <section id="cards" class="cards" aria-live="polite"></section>

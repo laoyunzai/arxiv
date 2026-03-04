@@ -4,6 +4,8 @@ const state = {
   report: null,
   activeTopic: "all",
   keyword: "",
+  dateFrom: "",
+  dateTo: "",
   flatPapers: [],
 };
 
@@ -13,6 +15,9 @@ const dom = {
   cards: document.getElementById("cards"),
   emptyState: document.getElementById("emptyState"),
   keywordInput: document.getElementById("keywordInput"),
+  dateFromInput: document.getElementById("dateFromInput"),
+  dateToInput: document.getElementById("dateToInput"),
+  clearDateFilter: document.getElementById("clearDateFilter"),
   pdfModal: document.getElementById("pdfModal"),
   pdfFrame: document.getElementById("pdfFrame"),
   pdfTitle: document.getElementById("pdfTitle"),
@@ -59,6 +64,42 @@ function formatTimeWithZone(input) {
 function parseDateTime(input) {
   const parsed = new Date(input || "");
   return Number.isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+}
+
+function toYmd(input) {
+  if (!input) return "";
+  const parsed = new Date(input);
+  if (!Number.isNaN(parsed.getTime())) {
+    return parsed.toISOString().slice(0, 10);
+  }
+  const match = String(input).match(/\d{4}-\d{2}-\d{2}/);
+  return match ? match[0] : "";
+}
+
+function passesDateFilter(paper) {
+  if (!state.dateFrom && !state.dateTo) {
+    return true;
+  }
+
+  const paperYmd = toYmd(paper.published);
+  if (!paperYmd) {
+    return false;
+  }
+
+  if (state.dateFrom && paperYmd < state.dateFrom) {
+    return false;
+  }
+
+  if (state.dateTo && paperYmd > state.dateTo) {
+    return false;
+  }
+
+  return true;
+}
+
+function updateDateInputLimits() {
+  dom.dateFromInput.max = state.dateTo || "";
+  dom.dateToInput.min = state.dateFrom || "";
 }
 
 function setMetaStrip(report) {
@@ -120,6 +161,10 @@ function currentFilteredPapers() {
   const keyword = state.keyword.trim().toLowerCase();
   return state.flatPapers.filter((paper) => {
     if (state.activeTopic !== "all" && paper.topic_name !== state.activeTopic) {
+      return false;
+    }
+
+    if (!passesDateFilter(paper)) {
       return false;
     }
 
@@ -215,6 +260,35 @@ function bindEvents() {
     renderCards();
   });
 
+  dom.dateFromInput.addEventListener("change", (event) => {
+    state.dateFrom = event.target.value || "";
+    if (state.dateTo && state.dateFrom && state.dateTo < state.dateFrom) {
+      state.dateTo = state.dateFrom;
+      dom.dateToInput.value = state.dateTo;
+    }
+    updateDateInputLimits();
+    renderCards();
+  });
+
+  dom.dateToInput.addEventListener("change", (event) => {
+    state.dateTo = event.target.value || "";
+    if (state.dateFrom && state.dateTo && state.dateFrom > state.dateTo) {
+      state.dateFrom = state.dateTo;
+      dom.dateFromInput.value = state.dateFrom;
+    }
+    updateDateInputLimits();
+    renderCards();
+  });
+
+  dom.clearDateFilter.addEventListener("click", () => {
+    state.dateFrom = "";
+    state.dateTo = "";
+    dom.dateFromInput.value = "";
+    dom.dateToInput.value = "";
+    updateDateInputLimits();
+    renderCards();
+  });
+
   dom.closePdf.addEventListener("click", closePdfModal);
   dom.pdfModal.addEventListener("click", (event) => {
     const target = event.target;
@@ -256,6 +330,7 @@ async function bootstrap() {
 
     state.report = report;
     state.flatPapers = flattenPapers(report);
+    updateDateInputLimits();
 
     setMetaStrip(report);
     renderTopicTabs(report);
