@@ -1,9 +1,14 @@
-lookback_days: 2
+lookback_days: 1
 max_results_per_topic: 50
 max_display_per_topic: 10
-openai:
+summary_cache_retention_days: 180
+summary_cache_max_entries: 8000
+llm:
   enabled: true
-  model: gpt-4.1-mini
+  provider: deepseek
+  model: deepseek-chat
+  base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
 
 topics:
   - name: Statistical Physics

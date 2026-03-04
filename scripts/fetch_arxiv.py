@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 import feedparser
 import requests
@@ -56,17 +57,58 @@ def fallback_summary(title: str, abstract: str) -> str:
     return summary
 
 
-def maybe_build_openai_client(config: dict[str, Any]) -> tuple[OpenAI | None, str]:
-    openai_cfg = config.get("openai", {})
-    if not openai_cfg.get("enabled", True):
+def to_iso_utc(dt: datetime) -> str:
+    return dt.astimezone(timezone.utc).isoformat(timespec="seconds")
+
+
+def parse_iso_datetime(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        dt = date_parser.parse(value)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def extract_arxiv_id(raw_id: str) -> str:
+    if not raw_id:
+        return ""
+    parsed = urlparse(raw_id)
+    path = parsed.path.strip("/")
+    if path.startswith("abs/"):
+        return path.split("/", 1)[1]
+    if path:
+        return path
+    return raw_id.strip()
+
+
+def maybe_build_llm_client(config: dict[str, Any]) -> tuple[OpenAI | None, str]:
+    llm_cfg = config.get("llm")
+    if llm_cfg is None:
+        llm_cfg = config.get("openai", {})
+
+    if not llm_cfg.get("enabled", True):
         return None, ""
 
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    provider = str(llm_cfg.get("provider", "deepseek")).lower()
+    if provider == "openai":
+        default_env = "OPENAI_API_KEY"
+    else:
+        default_env = "DEEPSEEK_API_KEY"
+
+    api_key_env = str(llm_cfg.get("api_key_env", default_env))
+    api_key = os.getenv(api_key_env, "").strip()
     if not api_key:
         return None, ""
 
-    model = openai_cfg.get("model", "gpt-4.1-mini")
-    return OpenAI(api_key=api_key), model
+    model = str(llm_cfg.get("model", "deepseek-chat"))
+    base_url = str(llm_cfg.get("base_url", "https://api.deepseek.com/v1")).strip()
+    if not base_url:
+        base_url = None
+    return OpenAI(api_key=api_key, base_url=base_url), model
 
 
 def llm_summary(
@@ -86,22 +128,78 @@ def llm_summary(
     )
 
     try:
-        response = client.responses.create(
+        response = client.chat.completions.create(
             model=model,
             temperature=0.2,
-            max_output_tokens=220,
-            input=[
+            max_tokens=220,
+            messages=[
                 {
                     "role": "system",
-                    "content": "你是科研助理，擅长快速提炼机器学习论文核心贡献。",
+                    "content": "你是科研助理，擅长快速提炼论文核心贡献并用中文简洁表达。",
                 },
                 {"role": "user", "content": prompt},
             ],
         )
-        text = normalize_text(getattr(response, "output_text", ""))
+        text = ""
+        if response.choices and response.choices[0].message:
+            text = normalize_text(response.choices[0].message.content or "")
         return text if text else fallback_summary(title, abstract)
     except Exception:
         return fallback_summary(title, abstract)
+
+
+def load_summary_cache(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {"version": 1, "items": {}}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        items = data.get("items", {})
+        if isinstance(items, dict):
+            return {"version": 1, "items": items}
+    except Exception:
+        pass
+    return {"version": 1, "items": {}}
+
+
+def get_cached_summary(cache: dict[str, Any], paper_id: str) -> str | None:
+    item = cache.get("items", {}).get(paper_id, {})
+    summary = item.get("summary", "")
+    if isinstance(summary, str) and summary.strip():
+        return summary.strip()
+    return None
+
+
+def set_cached_summary(cache: dict[str, Any], paper_id: str, summary: str, now_utc: datetime) -> None:
+    cache.setdefault("items", {})
+    cache["items"][paper_id] = {
+        "summary": normalize_text(summary),
+        "updated_at_utc": to_iso_utc(now_utc),
+    }
+
+
+def prune_summary_cache(cache: dict[str, Any], now_utc: datetime, retention_days: int, max_entries: int) -> None:
+    items = cache.get("items", {})
+    if not isinstance(items, dict):
+        cache["items"] = {}
+        return
+
+    cutoff = now_utc - timedelta(days=retention_days)
+    keep: list[tuple[str, str, dict[str, Any]]] = []
+    for paper_id, payload in items.items():
+        updated_at = parse_iso_datetime(str(payload.get("updated_at_utc", "")))
+        if updated_at is None:
+            continue
+        if updated_at >= cutoff:
+            keep.append((paper_id, updated_at.isoformat(), payload))
+
+    keep.sort(key=lambda x: x[1], reverse=True)
+    trimmed = keep[:max_entries]
+    cache["items"] = {paper_id: payload for paper_id, _, payload in trimmed}
+
+
+def save_summary_cache(path: Path, cache: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def fetch_topic_entries(topic: TopicConfig, max_results: int) -> list[dict[str, Any]]:
@@ -134,7 +232,7 @@ def fetch_topic_entries(topic: TopicConfig, max_results: int) -> list[dict[str, 
 
         papers.append(
             {
-                "id": entry.get("id", ""),
+                "id": extract_arxiv_id(entry.get("id", "")),
                 "title": normalize_text(entry.get("title", "")),
                 "authors": [normalize_text(a.get("name", "")) for a in entry.get("authors", [])],
                 "abstract": normalize_text(entry.get("summary", "")),
@@ -228,22 +326,29 @@ def run(args: argparse.Namespace) -> int:
     config_path = Path(args.config)
     output_path = Path(args.output)
     json_output_path = Path(args.json_output)
+    cache_path = Path(args.summary_cache)
 
     config = load_config(config_path)
     lookback_days = args.lookback_days or int(config.get("lookback_days", 2))
     max_results = int(config.get("max_results_per_topic", 20))
     max_display = args.max_display or int(config.get("max_display_per_topic", 10))
+    cache_retention_days = int(config.get("summary_cache_retention_days", 180))
+    cache_max_entries = int(config.get("summary_cache_max_entries", 8000))
 
     topics = parse_topics(config.get("topics", []))
     if not topics:
         raise ValueError("No topics configured in config file.")
 
-    openai_client, openai_model = maybe_build_openai_client(config)
+    llm_client, llm_model = maybe_build_llm_client(config)
+    summary_cache = load_summary_cache(cache_path)
+    cache_hits = 0
+    cache_misses = 0
 
     now_utc = datetime.now(timezone.utc)
     report: dict[str, Any] = {
         "generated_at_utc": now_utc.isoformat(timespec="seconds"),
         "lookback_days": lookback_days,
+        "cache": {"hits": 0, "misses": 0, "path": str(cache_path)},
         "topics": [],
     }
 
@@ -256,12 +361,23 @@ def run(args: argparse.Namespace) -> int:
 
         filtered = filtered[:max_display]
         for paper in filtered:
-            paper["summary"] = llm_summary(
-                client=openai_client,
-                model=openai_model,
+            paper_id = paper.get("id", "")
+            cached = get_cached_summary(summary_cache, paper_id)
+            if cached:
+                cache_hits += 1
+                paper["summary"] = cached
+                continue
+
+            cache_misses += 1
+            summary = llm_summary(
+                client=llm_client,
+                model=llm_model,
                 title=paper.get("title", ""),
                 abstract=paper.get("abstract", ""),
             )
+            paper["summary"] = summary
+            if paper_id:
+                set_cached_summary(summary_cache, paper_id, summary, now_utc)
 
         report["topics"].append(
             {
@@ -277,10 +393,20 @@ def run(args: argparse.Namespace) -> int:
     json_output_path.parent.mkdir(parents=True, exist_ok=True)
 
     output_path.write_text(markdown, encoding="utf-8")
+    report["cache"]["hits"] = cache_hits
+    report["cache"]["misses"] = cache_misses
+    prune_summary_cache(
+        cache=summary_cache,
+        now_utc=now_utc,
+        retention_days=cache_retention_days,
+        max_entries=cache_max_entries,
+    )
+    save_summary_cache(cache_path, summary_cache)
     json_output_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"Wrote markdown: {output_path}")
     print(f"Wrote JSON: {json_output_path}")
+    print(f"Cache hits: {cache_hits}, misses: {cache_misses}, cache file: {cache_path}")
     return 0
 
 
@@ -289,6 +415,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--config", default="config/topics.yaml", help="Path to topics config YAML")
     parser.add_argument("--output", default="docs/index.md", help="Output markdown path")
     parser.add_argument("--json-output", default="docs/data/latest.json", help="Output JSON path")
+    parser.add_argument(
+        "--summary-cache",
+        default="docs/data/summary_cache.json",
+        help="Summary cache JSON path for de-duplicating LLM calls",
+    )
     parser.add_argument("--lookback-days", type=int, default=None, help="Override lookback days")
     parser.add_argument("--max-display", type=int, default=None, help="Override max papers per topic")
     return parser

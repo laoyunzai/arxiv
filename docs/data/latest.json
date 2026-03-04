@@ -1,5 +1,10 @@
 {
   "generated_at_utc": null,
   "lookback_days": null,
+  "cache": {
+    "hits": 0,
+    "misses": 0,
+    "path": "docs/data/summary_cache.json"
+  },
   "topics": []
 }
