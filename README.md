@@ -67,5 +67,11 @@ python scripts/fetch_arxiv.py --config config/topics.yaml --output docs/index.md
 ## 6) 低成本建议
 
 - `lookback_days: 1`（每天抓取通常足够）
-- `max_display_per_topic` 按需下调（例如 5）
+- `max_display_per_topic` 按需下调（例如 5；设为 `0` 表示全量展示）
 - 保留摘要缓存文件，可显著减少重复调用 LLM
+
+## 7) 全量抓取设置
+
+- `fetch_page_size: 200`：按页拉取 arXiv
+- `max_results_per_topic: 0`：每个主题抓取不设上限（在回溯窗口内）
+- `max_display_per_topic: 0`：网页展示不设上限

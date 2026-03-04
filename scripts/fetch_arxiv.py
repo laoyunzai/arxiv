@@ -20,6 +20,7 @@ from openai import OpenAI
 
 ARXIV_API_URL = "https://export.arxiv.org/api/query"
 DEFAULT_TIMEOUT = 30
+DEFAULT_PAGE_SIZE = 200
 
 
 @dataclass
@@ -81,6 +82,18 @@ def parse_iso_datetime(value: str) -> datetime | None:
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=timezone.utc)
         return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def parse_published_utc(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = date_parser.parse(value)
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
     except Exception:
         return None
 
@@ -222,56 +235,100 @@ def save_summary_cache(path: Path, cache: dict[str, Any]) -> None:
     path.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def fetch_topic_entries(topic: TopicConfig, max_results: int) -> list[dict[str, Any]]:
-    params = {
-        "search_query": topic.query,
-        "start": 0,
-        "max_results": max_results,
-        "sortBy": "submittedDate",
-        "sortOrder": "descending",
+def parse_entry(entry: dict[str, Any]) -> dict[str, Any]:
+    links = [l.get("href", "") for l in entry.get("links", []) if l.get("href")]
+    html_link = entry.get("link", "")
+    pdf_link = ""
+    for link in links:
+        if link.endswith(".pdf") or "/pdf/" in link:
+            pdf_link = link
+            break
+
+    return {
+        "id": extract_arxiv_id(entry.get("id", "")),
+        "title": normalize_text(entry.get("title", "")),
+        "authors": [normalize_text(a.get("name", "")) for a in entry.get("authors", [])],
+        "abstract": normalize_text(entry.get("summary", "")),
+        "published": entry.get("published", ""),
+        "updated": entry.get("updated", ""),
+        "html_url": html_link,
+        "pdf_url": pdf_link,
     }
 
-    response = requests.get(
-        ARXIV_API_URL,
-        params=params,
-        timeout=DEFAULT_TIMEOUT,
-        headers={"User-Agent": "arxiv-daily-digest/1.0"},
-    )
-    response.raise_for_status()
-    feed = feedparser.parse(response.text)
 
+def fetch_topic_entries(
+    topic: TopicConfig,
+    now_utc: datetime,
+    lookback_days: int,
+    page_size: int,
+    max_results: int | None,
+) -> list[dict[str, Any]]:
+    cutoff = now_utc - timedelta(days=lookback_days)
+    start = 0
     papers: list[dict[str, Any]] = []
-    for entry in feed.entries:
-        links = [l.get("href", "") for l in entry.get("links", []) if l.get("href")]
-        html_link = entry.get("link", "")
-        pdf_link = ""
-        for link in links:
-            if link.endswith(".pdf") or "/pdf/" in link:
-                pdf_link = link
+    seen_ids: set[str] = set()
+
+    while True:
+        if max_results is None:
+            current_page_size = page_size
+        else:
+            remaining = max_results - len(papers)
+            if remaining <= 0:
+                break
+            current_page_size = min(page_size, remaining)
+
+        params = {
+            "search_query": topic.query,
+            "start": start,
+            "max_results": current_page_size,
+            "sortBy": "submittedDate",
+            "sortOrder": "descending",
+        }
+
+        response = requests.get(
+            ARXIV_API_URL,
+            params=params,
+            timeout=DEFAULT_TIMEOUT,
+            headers={"User-Agent": "arxiv-daily-digest/1.0"},
+        )
+        response.raise_for_status()
+        feed = feedparser.parse(response.text)
+        entries = list(feed.entries)
+        if not entries:
+            break
+
+        reached_before_cutoff = False
+        for entry in entries:
+            parsed = parse_entry(entry)
+            paper_id = parsed.get("id", "")
+            if paper_id in seen_ids:
+                continue
+            seen_ids.add(paper_id)
+
+            published_dt = parse_published_utc(parsed.get("published", ""))
+            if published_dt is not None and published_dt < cutoff:
+                reached_before_cutoff = True
                 break
 
-        papers.append(
-            {
-                "id": extract_arxiv_id(entry.get("id", "")),
-                "title": normalize_text(entry.get("title", "")),
-                "authors": [normalize_text(a.get("name", "")) for a in entry.get("authors", [])],
-                "abstract": normalize_text(entry.get("summary", "")),
-                "published": entry.get("published", ""),
-                "updated": entry.get("updated", ""),
-                "html_url": html_link,
-                "pdf_url": pdf_link,
-            }
-        )
+            papers.append(parsed)
+            if max_results is not None and len(papers) >= max_results:
+                break
+
+        if reached_before_cutoff:
+            break
+        if max_results is not None and len(papers) >= max_results:
+            break
+        if len(entries) < current_page_size:
+            break
+
+        start += len(entries)
 
     return papers
 
 
 def within_lookback(published: str, now_utc: datetime, lookback_days: int) -> bool:
-    if not published:
-        return False
-    try:
-        pub_dt = date_parser.parse(published).astimezone(timezone.utc)
-    except Exception:
+    pub_dt = parse_published_utc(published)
+    if pub_dt is None:
         return False
     cutoff = now_utc - timedelta(days=lookback_days)
     return pub_dt >= cutoff
@@ -350,8 +407,15 @@ def run(args: argparse.Namespace) -> int:
 
     config = load_config(config_path)
     lookback_days = args.lookback_days or int(config.get("lookback_days", 2))
-    max_results = int(config.get("max_results_per_topic", 20))
-    max_display = args.max_display or int(config.get("max_display_per_topic", 10))
+    fetch_page_size = int(config.get("fetch_page_size", DEFAULT_PAGE_SIZE))
+    max_results_cfg = args.max_results if args.max_results is not None else int(
+        config.get("max_results_per_topic", 0)
+    )
+    max_results = max_results_cfg if max_results_cfg > 0 else None
+    max_display_cfg = args.max_display if args.max_display is not None else int(
+        config.get("max_display_per_topic", 0)
+    )
+    max_display = max_display_cfg if max_display_cfg > 0 else None
     cache_retention_days = int(config.get("summary_cache_retention_days", 180))
     cache_max_entries = int(config.get("summary_cache_max_entries", 8000))
     llm_cfg = config.get("llm", {})
@@ -375,13 +439,14 @@ def run(args: argparse.Namespace) -> int:
     }
 
     for topic in topics:
-        entries = fetch_topic_entries(topic, max_results=max_results)
-
-        filtered = [
-            e for e in entries if within_lookback(e.get("published", ""), now_utc, lookback_days)
-        ]
-
-        filtered = filtered[:max_display]
+        entries = fetch_topic_entries(
+            topic=topic,
+            now_utc=now_utc,
+            lookback_days=lookback_days,
+            page_size=fetch_page_size,
+            max_results=max_results,
+        )
+        filtered = entries if max_display is None else entries[:max_display]
         for paper in filtered:
             paper_id = paper.get("id", "")
             cache_key = build_cache_key(paper_id=paper_id, model=llm_model, target_chars=summary_target_chars)
@@ -445,7 +510,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="Summary cache JSON path for de-duplicating LLM calls",
     )
     parser.add_argument("--lookback-days", type=int, default=None, help="Override lookback days")
-    parser.add_argument("--max-display", type=int, default=None, help="Override max papers per topic")
+    parser.add_argument(
+        "--max-results",
+        type=int,
+        default=None,
+        help="Override max fetched papers per topic (<=0 means no limit)",
+    )
+    parser.add_argument(
+        "--max-display",
+        type=int,
+        default=None,
+        help="Override max displayed papers per topic (<=0 means no limit)",
+    )
     return parser
 
 

@@ -1,6 +1,7 @@
 lookback_days: 1
-max_results_per_topic: 50
-max_display_per_topic: 10
+fetch_page_size: 200
+max_results_per_topic: 0
+max_display_per_topic: 0
 summary_cache_retention_days: 180
 summary_cache_max_entries: 8000
 llm:
