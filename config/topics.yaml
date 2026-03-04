@@ -9,6 +9,7 @@ llm:
   model: deepseek-reasoner
   base_url: https://api.deepseek.com/v1
   api_key_env: DEEPSEEK_API_KEY
+  summary_target_chars: 150
 
 topics:
   - name: Statistical Physics

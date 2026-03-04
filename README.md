@@ -3,7 +3,7 @@
 这个仓库会每天自动执行：
 
 1. 按你配置的主题从 arXiv 拉取最新论文
-2. 生成中文摘要（优先使用 DeepSeek API；没有 Key 则使用规则摘要）
+2. 生成中文摘要（优先使用 DeepSeek API，默认约 150 字；没有 Key 则使用规则摘要）
 3. 更新 `docs/index.md` 并自动提交到仓库
 4. 通过 GitHub Pages 展示为个人网页
 5. 使用 `docs/data/summary_cache.json` 按 arXiv ID 缓存摘要，避免重复消耗 token
@@ -58,7 +58,7 @@ python scripts/fetch_arxiv.py --config config/topics.yaml --output docs/index.md
 
 ## 5) 定时
 
-默认每天 UTC 01:00 执行（北京时间 09:00）。
+默认每个工作日 UTC 02:30 执行（北京时间 10:30）。
 
 可在 `.github/workflows/daily-arxiv.yml` 修改 `cron`。
 

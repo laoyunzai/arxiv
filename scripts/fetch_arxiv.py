@@ -41,18 +41,30 @@ def markdown_escape(text: str) -> str:
     return normalize_text(text).replace("|", "\\|")
 
 
-def fallback_summary(title: str, abstract: str) -> str:
+def fallback_summary(title: str, abstract: str, target_chars: int = 150) -> str:
     clean = normalize_text(abstract)
     if not clean:
         return "摘要缺失。"
 
     sentences = re.split(r"(?<=[。！？.!?])\s+", clean)
-    summary = " ".join(sentences[:2]).strip()
-    if not summary:
-        summary = clean[:220]
+    selected: list[str] = []
+    total = 0
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence:
+            continue
+        selected.append(sentence)
+        total += len(sentence)
+        if total >= target_chars:
+            break
 
-    if len(summary) > 240:
-        summary = summary[:237].rstrip() + "..."
+    summary = " ".join(selected).strip()
+    if not summary:
+        summary = clean[: max(220, target_chars + 60)]
+
+    max_len = max(220, target_chars + 60)
+    if len(summary) > max_len:
+        summary = summary[: max_len - 3].rstrip() + "..."
 
     return summary
 
@@ -116,13 +128,15 @@ def llm_summary(
     model: str,
     title: str,
     abstract: str,
+    target_chars: int,
 ) -> str:
     if client is None:
-        return fallback_summary(title, abstract)
+        return fallback_summary(title, abstract, target_chars=target_chars)
 
     prompt = (
-        "请用中文总结这篇 arXiv 论文，输出 1-2 句，重点说明方法和贡献，"
-        "不要使用序号，不要超过 90 个汉字。\n\n"
+        f"请用中文总结这篇 arXiv 论文，输出约 {target_chars} 字（允许 ±30 字），"
+        "重点说明研究问题、核心方法、关键结果与潜在影响。"
+        "请写成一段连贯文字，不使用序号。\n\n"
         f"标题: {normalize_text(title)}\n"
         f"摘要: {normalize_text(abstract)}"
     )
@@ -143,9 +157,9 @@ def llm_summary(
         text = ""
         if response.choices and response.choices[0].message:
             text = normalize_text(response.choices[0].message.content or "")
-        return text if text else fallback_summary(title, abstract)
+        return text if text else fallback_summary(title, abstract, target_chars=target_chars)
     except Exception:
-        return fallback_summary(title, abstract)
+        return fallback_summary(title, abstract, target_chars=target_chars)
 
 
 def load_summary_cache(path: Path) -> dict[str, Any]:
@@ -161,17 +175,23 @@ def load_summary_cache(path: Path) -> dict[str, Any]:
     return {"version": 1, "items": {}}
 
 
-def get_cached_summary(cache: dict[str, Any], paper_id: str) -> str | None:
-    item = cache.get("items", {}).get(paper_id, {})
+def build_cache_key(paper_id: str, model: str, target_chars: int) -> str:
+    normalized_id = normalize_text(paper_id)
+    normalized_model = normalize_text(model) or "fallback"
+    return f"{normalized_id}::{normalized_model}::{target_chars}"
+
+
+def get_cached_summary(cache: dict[str, Any], cache_key: str) -> str | None:
+    item = cache.get("items", {}).get(cache_key, {})
     summary = item.get("summary", "")
     if isinstance(summary, str) and summary.strip():
         return summary.strip()
     return None
 
 
-def set_cached_summary(cache: dict[str, Any], paper_id: str, summary: str, now_utc: datetime) -> None:
+def set_cached_summary(cache: dict[str, Any], cache_key: str, summary: str, now_utc: datetime) -> None:
     cache.setdefault("items", {})
-    cache["items"][paper_id] = {
+    cache["items"][cache_key] = {
         "summary": normalize_text(summary),
         "updated_at_utc": to_iso_utc(now_utc),
     }
@@ -334,6 +354,8 @@ def run(args: argparse.Namespace) -> int:
     max_display = args.max_display or int(config.get("max_display_per_topic", 10))
     cache_retention_days = int(config.get("summary_cache_retention_days", 180))
     cache_max_entries = int(config.get("summary_cache_max_entries", 8000))
+    llm_cfg = config.get("llm", {})
+    summary_target_chars = int(llm_cfg.get("summary_target_chars", 150))
 
     topics = parse_topics(config.get("topics", []))
     if not topics:
@@ -362,7 +384,8 @@ def run(args: argparse.Namespace) -> int:
         filtered = filtered[:max_display]
         for paper in filtered:
             paper_id = paper.get("id", "")
-            cached = get_cached_summary(summary_cache, paper_id)
+            cache_key = build_cache_key(paper_id=paper_id, model=llm_model, target_chars=summary_target_chars)
+            cached = get_cached_summary(summary_cache, cache_key)
             if cached:
                 cache_hits += 1
                 paper["summary"] = cached
@@ -374,10 +397,11 @@ def run(args: argparse.Namespace) -> int:
                 model=llm_model,
                 title=paper.get("title", ""),
                 abstract=paper.get("abstract", ""),
+                target_chars=summary_target_chars,
             )
             paper["summary"] = summary
             if paper_id:
-                set_cached_summary(summary_cache, paper_id, summary, now_utc)
+                set_cached_summary(summary_cache, cache_key, summary, now_utc)
 
         report["topics"].append(
             {

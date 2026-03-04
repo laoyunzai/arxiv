@@ -2,7 +2,7 @@ name: Daily arXiv Digest
 
 on:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "30 2 * * 1-5"
   workflow_dispatch:
 
 permissions:
