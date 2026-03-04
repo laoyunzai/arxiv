@@ -7,12 +7,14 @@
 3. 更新 `docs/index.md` 并自动提交到仓库
 4. 通过 GitHub Pages 展示为个人网页
 5. 使用 `docs/data/summary_cache.json` 按 arXiv ID 缓存摘要，避免重复消耗 token
+6. 页面支持主题筛选、关键词检索、原文链接与 PDF 在线预览
 
 ## 目录结构
 
 - `config/topics.yaml`: 主题与检索表达式配置
 - `scripts/fetch_arxiv.py`: 抓取与摘要脚本
-- `docs/index.md`: 生成的网页内容
+- `docs/index.html`: 交互式网页（推荐访问）
+- `docs/index.md`: 每日生成的 Markdown 备份
 - `docs/data/summary_cache.json`: 摘要缓存（去重）
 - `.github/workflows/daily-arxiv.yml`: 每日定时工作流
 

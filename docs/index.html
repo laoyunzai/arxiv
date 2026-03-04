@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="每日自动更新的 arXiv 论文追踪：统计物理、量子计算、机器学习与顶级专家动态。"
+    />
+    <title>arXiv Frontier Briefing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Daily Research Radar</p>
+        <h1>arXiv Frontier Briefing</h1>
+        <p class="subtitle">
+          追踪统计物理、量子计算、机器学习与 DeepMind/顶级专家论文，支持原文直达与 PDF 在线预览。
+        </p>
+        <div class="meta-strip" id="metaStrip">
+          <span class="pill">加载中...</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="toolbar">
+        <div class="search-wrap">
+          <label for="keywordInput">检索</label>
+          <input
+            id="keywordInput"
+            type="search"
+            placeholder="按标题、作者、摘要关键词过滤，如 quantum, DeepMind"
+            autocomplete="off"
+          />
+        </div>
+        <div class="topic-wrap">
+          <span class="topic-label">主题</span>
+          <div id="topicTabs" class="topic-tabs"></div>
+        </div>
+      </section>
+
+      <section id="cards" class="cards" aria-live="polite"></section>
+      <section id="emptyState" class="empty hidden">
+        <h2>暂无匹配结果</h2>
+        <p>请切换主题或调整关键词后重试。</p>
+      </section>
+    </main>
+
+    <div id="pdfModal" class="pdf-modal hidden" role="dialog" aria-modal="true" aria-label="PDF 预览">
+      <div class="pdf-backdrop" data-close="1"></div>
+      <div class="pdf-panel">
+        <div class="pdf-header">
+          <h2 id="pdfTitle">论文 PDF 预览</h2>
+          <button id="closePdf" class="icon-btn" aria-label="关闭预览">✕</button>
+        </div>
+        <div class="pdf-actions">
+          <a id="pdfOpenAbs" target="_blank" rel="noopener">打开原文</a>
+          <a id="pdfOpenPdf" target="_blank" rel="noopener">新窗口打开 PDF</a>
+        </div>
+        <iframe id="pdfFrame" title="PDF 预览窗口" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        页面自动读取 <code>docs/data/latest.json</code>。若你看到旧数据，请等待 GitHub Actions 下一次运行。
+      </p>
+    </footer>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>
