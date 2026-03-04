@@ -1,6 +1,6 @@
 # arXiv Daily Digest
 
-生成时间（UTC）：2026-03-04T11:39:19+00:00
+生成时间（UTC）：2026-03-04T11:54:19+00:00
 回溯窗口：最近 1 天
 
 ## Statistical Physics
