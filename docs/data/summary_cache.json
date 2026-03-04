@@ -1,4 +1,133 @@
 {
   "version": 1,
-  "items": {}
+  "items": {
+    "2603.03268v1::deepseek-reasoner::150": {
+      "summary": "This paper investigates the long-time asymptotics and the existence of stationary solutions for a class of stochastic Volterra equations (SVEs). To address the non-Markovian nature of SVEs, we employ a Markovian lifti...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03260v1::deepseek-reasoner::150": {
+      "summary": "该研究针对商业设施（餐馆、咖啡馆）开业与住宅房价的因果关系这一经典难题，利用伦敦21,189家店铺的渐进开业数据，",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03248v1::deepseek-reasoner::150": {
+      "summary": "该研究探讨了在具有众多自由度的大型复杂随机系统中，出现“麦克斯韦妖”行为的概率问题。通过构建连续与离散随机动力学的零模型进行分析，结果表明，随着系统自由度增加，发现此类可局部利用热涨落做功的“妖”的概率至少呈指数级下降，甚至可能呈双指数级下降。这一发现意味着",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03221v1::deepseek-reasoner::150": {
+      "summary": "The recent discovery of unconventional momentum-dependent magnetic orders has expanded the landscape of magnetism beyond conventional ferromagnetism and antiferromagnetism.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03214v1::deepseek-reasoner::150": {
+      "summary": "本研究针对蜂窝状",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03201v1::deepseek-reasoner::150": {
+      "summary": "本研究针对关联记忆模型中顺序检索与多记忆整合的理论基础薄弱问题，提出输入驱动可塑性Hopfield网络的动力学理论。通过构建快（关联检索）慢（推理动态）双时间尺度耦合",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03179v1::deepseek-reasoner::150": {
+      "summary": "本文研究如何优化电网中储能系统的配置与发电冗余，以应对可再生能源波动导致的供需失衡。作者建立模型分析储能容量、发电冗余与地理位置对能量投资回报比（ESOI）的影响，并以法国电网为例，",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03162v1::deepseek-reasoner::150": {
+      "summary": "In this perspective article, we discuss the scenario of dynamically emergent correlation (DEC) arising in classical and quantum noninteracting systems when they are subjected to a common fluctuating stochastic environ...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03103v1::deepseek-reasoner::150": {
+      "summary": "We show that monogamy of mutual information (MMI) in free-fermion ground states is a property of the observation scale, not of the quantum state. For three adjacent strips of width $w$ on a two-dimensional lattice, tr...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03057v1::deepseek-reasoner::150": {
+      "summary": "We consider a two-dimensional electron gas (2DEG) formed at a near-ferroelectric interface and strongly coupled to polar phonons. Through a self-consistent microscopic many-body calculation, we show that the coupled s...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03263v1::deepseek-reasoner::150": {
+      "summary": "该研究针对量子通信中猫态码纠",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03240v1::deepseek-reasoner::150": {
+      "summary": "该研究探讨了应变石墨烯在静电与磁势垒",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03225v1::deepseek-reasoner::150": {
+      "summary": "本文为多方量子密钥协商（MQKA",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03217v1::deepseek-reasoner::150": {
+      "summary": "该研究揭示量子密钥分发系统中单光子雪崩光电二极管因计数率依赖的恢复非线性",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03186v1::deepseek-reasoner::150": {
+      "summary": "本研究旨在解决单量子点难以同时产生反聚束与超",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03185v1::deepseek-reasoner::150": {
+      "summary": "该研究旨在解决量子非高斯态层级度量（恒星秩）难以实验测定，而易于测量的非高斯特征见证又缺乏",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03182v1::deepseek-reasoner::150": {
+      "summary": "We show how entanglement-assisted codes can be constructed from arbitrary quantum codes by associating them with quantum codes for erasure channels. If a subset of physical qubits is correctable for an erasure error,...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03157v1::deepseek-reasoner::150": {
+      "summary": "Coherent detection of ultralight bosonic dark matter can be achieved by monitoring slow Rabi oscillations in superconducting qubits. We introduce an ancilla-assisted, gate-based protocol that enhances sensitivity to t...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03149v1::deepseek-reasoner::150": {
+      "summary": "In recent years, neutral atom quantum computers (NAQCs) have attracted a lot of attention, primarily due to their long coherence times and good scalability.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03109v1::deepseek-reasoner::150": {
+      "summary": "Predicting absorption, distribution, metabolism, excretion, and toxicity (ADMET) properties remains a critical bottleneck in drug discovery. While molecular fingerprints effectively capture local structural features,...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03281v1::deepseek-reasoner::150": {
+      "summary": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG a...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03280v1::deepseek-reasoner::150": {
+      "summary": "Many essential manipulation tasks - such as food preparation, surgery, and craftsmanship - remain intractable for autonomous robots. These tasks are characterized not only by contact-rich, force-sensitive dynamics, bu...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03278v1::deepseek-reasoner::150": {
+      "summary": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03275v1::deepseek-reasoner::150": {
+      "summary": "Human mobility trajectories are widely studied in public health and social science, where different demographic groups exhibit significantly different mobility patterns.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03270v1::deepseek-reasoner::150": {
+      "summary": "本研究评估了针对移动设备短信钓鱼中域名生成算法的检测方法。针对现有研究缺乏对短信钓鱼场景DGA检测评估的问题，研究者利用2022-2025年间短信钓鱼链接构建的半合成数据集Gravity Falls，测试了两种基于字符串分析的启发式方法和两种机器学习检测器的性能。结果显示，",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03269v1::deepseek-reasoner::150": {
+      "summary": "Feedforward geometric foundation models achieve strong short-window reconstruction, yet scaling them to minutes-long videos is bottlenecked by quadratic attention complexity or limited effective memory in recurrent de...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03259v1::deepseek-reasoner::150": {
+      "summary": "The numerical simulation of convection-dominated transient transport phenomena poses significant computational challenges due to sharp gradients and propagating fronts across the spatiotemporal domain.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03258v1::deepseek-reasoner::150": {
+      "summary": "The accelerating adoption of language models (LMs) as agents for deployment in long-context tasks motivates a thorough understanding of goal drift: agents' tendency to deviate from an original objective.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03252v1::deepseek-reasoner::150": {
+      "summary": "当前不完美信息博弈的AI算法多基于单一游戏评估，难以衡量其跨游戏鲁棒性。为此，本研究提出 Valet 测试平台，汇集21款涵盖多样机制",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03251v1::deepseek-reasoner::150": {
+      "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target mode...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.02935v1::deepseek-reasoner::150": {
+      "summary": "Offline meta-reinforcement learning seeks to learn policies that generalize across related tasks from fixed datasets. Context-based methods infer a task representation from transition histories, but learning effective...",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    },
+    "2603.03276v1::deepseek-reasoner::150": {
+      "summary": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque.",
+      "updated_at_utc": "2026-03-04T11:39:19+00:00"
+    }
+  }
 }

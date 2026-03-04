@@ -1,10 +1,589 @@
 {
-  "generated_at_utc": null,
-  "lookback_days": null,
+  "generated_at_utc": "2026-03-04T11:39:19+00:00",
+  "lookback_days": 1,
   "cache": {
     "hits": 0,
-    "misses": 0,
+    "misses": 32,
     "path": "docs/data/summary_cache.json"
   },
-  "topics": []
+  "topics": [
+    {
+      "name": "Statistical Physics",
+      "query": "cat:cond-mat.stat-mech OR cat:cond-mat.dis-nn OR cat:physics.soc-ph OR cat:cond-mat.str-el OR all:\"statistical physics\" OR all:\"non-equilibrium\"",
+      "papers": [
+        {
+          "id": "2603.03268v1",
+          "title": "Exponential ergodicity and finite-dimensional approximation for Markovian lifts of stochastic Volterra equations",
+          "authors": [
+            "Yushi Hamaguchi"
+          ],
+          "abstract": "This paper investigates the long-time asymptotics and the existence of stationary solutions for a class of stochastic Volterra equations (SVEs). To address the non-Markovian nature of SVEs, we employ a Markovian lifting technique, formulating a Markovian lift as the solution to a stochastic evolution equation (SEE) on a Gelfand triplet. Our main objective is to establish the ergodicity of this Markovian lift via the generalized Harris' theorem, which in turn yields the asymptotic results for the original SVE. Despite the challenges posed by the highly degenerate, infinite-dimensional nature of the SEE, we achieve this by constructing a generalized coupling and a distance function that exploit the structural properties arising from the non-local operators in its coefficients. Furthermore, we prove that the invariant probability measure and, more generally, the stationary law on the path space of the SEE can be weakly approximated by those of finite-dimensional SDEs. This yields a novel approximation result for the stationary solution of the original SVE, while offering a rigorous mathematical framework that supports the validity of the Markovian embedding concept widely utilized in statistical physics.",
+          "published": "2026-03-03T18:55:23Z",
+          "updated": "2026-03-03T18:55:23Z",
+          "html_url": "https://arxiv.org/abs/2603.03268v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03268v1",
+          "summary": "This paper investigates the long-time asymptotics and the existence of stationary solutions for a class of stochastic Volterra equations (SVEs). To address the non-Markovian nature of SVEs, we employ a Markovian lifti..."
+        },
+        {
+          "id": "2603.03260v1",
+          "title": "House Price Effects of Commercial Entry: Event Study Evidence from London",
+          "authors": [
+            "Wanqi Liu",
+            "Rong Zhao"
+          ],
+          "abstract": "Restaurants, cafes, and other commercial amenities are among the most visible markers of neighborhood change, yet whether their arrival drives house price appreciation or merely follows rising demand remains an open empirical question. This study investigates the causal effect of commercial entry on residential property values in Greater London. Exploiting the staggered timing of 21,189 restaurant and cafe openings across 4,835 Lower Layer Super Output Areas (LSOAs)--identified through Energy Performance Certificate records--we implement an event study design with LSOA-specific linear trends that passes the parallel trends test (F = 1.04, p = 0.384). We find that house prices rise monotonically after commercial entry, reaching +4.1% at four years post-treatment (p < 0.01). The effect is gradual and cumulative, consistent with amenity capitalisation. By matching EPC records to Google Places API price tier data at the building level, we further show that the effect is driven by upmarket commercial entry (+7.4%, clean pre-trends) rather than budget establishments (questionable pre-trends, unreliable post-treatment effect), establishing that the quality of commercial clustering--not merely its presence--drives neighborhood price dynamics. Results are robust to heterogeneity-robust estimation, alternative treatment thresholds, broader commercial category definitions, and a permutation-based placebo test.",
+          "published": "2026-03-03T18:51:20Z",
+          "updated": "2026-03-03T18:51:20Z",
+          "html_url": "https://arxiv.org/abs/2603.03260v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03260v1",
+          "summary": "该研究针对商业设施（餐馆、咖啡馆）开业与住宅房价的因果关系这一经典难题，利用伦敦21,189家店铺的渐进开业数据，"
+        },
+        {
+          "id": "2603.03248v1",
+          "title": "Will a Large Complex System be a Maxwell Demon?",
+          "authors": [
+            "Matthew P Leighton"
+          ],
+          "abstract": "Emerging evidence suggests that physical systems operating as Maxwell demons, in which some subsystem of a larger system extracts heat energy from its environment in an apparent local violation of the second law, are commonplace throughout biology. Should these findings surprise us, or is Maxwell demon behavior inevitable in sufficiently large complex systems? In this Letter we pose the question of how likely it is that a random stochastic system with many degrees of freedom will operate as a Maxwell demon, considering null models for both continuous and discrete random dynamics. Our results show the probability of a finding a demon decreases at least exponentially, and in some cases double-exponentially, with the number of degrees of freedom, ultimately suggesting that large complex demons can only arise through a process of selection.",
+          "published": "2026-03-03T18:39:30Z",
+          "updated": "2026-03-03T18:39:30Z",
+          "html_url": "https://arxiv.org/abs/2603.03248v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03248v1",
+          "summary": "该研究探讨了在具有众多自由度的大型复杂随机系统中，出现“麦克斯韦妖”行为的概率问题。通过构建连续与离散随机动力学的零模型进行分析，结果表明，随着系统自由度增加，发现此类可局部利用热涨落做功的“妖”的概率至少呈指数级下降，甚至可能呈双指数级下降。这一发现意味着"
+        },
+        {
+          "id": "2603.03221v1",
+          "title": "Emergent superconducting phases in unconventional $p$-wave magnets: Topological superconductivity, Bogoliubov Fermi surfaces and superconducting diode effect",
+          "authors": [
+            "Amartya Pal",
+            "Paramita Dutta",
+            "Arijit Saha"
+          ],
+          "abstract": "The recent discovery of unconventional momentum-dependent magnetic orders has expanded the landscape of magnetism beyond conventional ferromagnetism and antiferromagnetism. Among them, $p$-wave magnets ($p$WMs) represent a novel class of odd-parity, non-collinear compensated magnetic order that generates spin-split electronic bands. In this work, our theoretical investigation establishes $p$WMs as a versatile platform for realizing intriguing superconducting phases including topological superconductivity (TSC), Bogoliubov Fermi surfaces (BFSs), and superconducting diode effect (SDE), within a unified microscopic framework. Employing a minimal model incorporating $p$-wave magnetic order, exchange coupling, and Zeeman fields, we perform a self-consistent mean-field analysis and uncover a rich phase diagram featuring unconventional finite-momentum Fulde-Ferrell (FF) and Larkin-Ovchinnikov (LO) superconducting phases. Remarkably, we also show that $p$WMs can undergo a transition to a TSC phase anchoring Majorana flat edge modes, a hallmark of two-dimensional TSCs, even without Rashba spin-orbit coupling and Zeeman field. Upon applying a Zeeman field, gapless FF and LO phases emerge with BFSs characterized by the appearance of finite zero-energy quasiparticle density of states. Furthermore, we demonstrate that SDE arises naturally in the asymmetric FF phase. Our analysis manifests that $p$WMs serve as a unique and novel platform to host TSC phase, gapless superconducting states, and non-reciprocal transport phenomena.",
+          "published": "2026-03-03T18:15:27Z",
+          "updated": "2026-03-03T18:15:27Z",
+          "html_url": "https://arxiv.org/abs/2603.03221v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03221v1",
+          "summary": "The recent discovery of unconventional momentum-dependent magnetic orders has expanded the landscape of magnetism beyond conventional ferromagnetism and antiferromagnetism."
+        },
+        {
+          "id": "2603.03214v1",
+          "title": "Anisotropic magnetoelastic coupling in the honeycomb magnet Na$_3$Co$_2$SbO$_6$",
+          "authors": [
+            "Prashanta K. Mukharjee",
+            "Sebastian Erdmann",
+            "Lichen Wang",
+            "Julian Kaiser",
+            "Anton Jesche",
+            "Pascal Puphal",
+            "Masahiko Isobe",
+            "Matthias Hepting",
+            "Bernhard Keimer",
+            "Philipp Gegenwart",
+            "Alexander A. Tsirlin"
+          ],
+          "abstract": "We present magnetization and dilatometry measurements on the honeycomb cobaltate Na$_3$Co$_2$SbO$_6$ and map out its detailed field-temperature phase diagram down to sub-Kelvin temperatures. Our data for in-plane magnetic fields show a strongly anisotropic $c^{*}$-axis lattice response, which is dominated by the variation of Co--O--Co bond angles according to \\textit{ab initio} calculations. At $T = 0.4$~K, the magnetization $M(B)$ exhibits step-like features that are also highly anisotropic. In the case of $B \\parallel b$, a small hysteresis observed around the second field-induced magnetic transition ($B_{c2}$) indicates its first-order character, whereas divergence of the magnetic Grüneisen parameter at $B_{c2}$ is suppressed upon cooling and signals the absence of quantum critical behavior upon entering the field-polarized state. None of our thermodynamic measurements provide evidence for a field-induced quantum spin liquid state near or above $B_{c2}$.",
+          "published": "2026-03-03T18:07:23Z",
+          "updated": "2026-03-03T18:07:23Z",
+          "html_url": "https://arxiv.org/abs/2603.03214v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03214v1",
+          "summary": "本研究针对蜂窝状"
+        },
+        {
+          "id": "2603.03201v1",
+          "title": "A Dynamical Theory of Sequential Retrieval in Input-Driven Hopfield Networks",
+          "authors": [
+            "Simone Betteti",
+            "Giacomo Baggio",
+            "Sandro Zampieri"
+          ],
+          "abstract": "Reasoning is the ability to integrate internal states and external inputs in a meaningful and semantically consistent flow. Contemporary machine learning (ML) systems increasingly rely on such sequential reasoning, from language understanding to multi-modal generation, often operating over dictionaries of prototypical patterns reminiscent of associative memory models. Understanding retrieval and sequentiality in associative memory models provides a powerful bridge to gain insight into ML reasoning. While the static retrieval properties of associative memory models are well understood, the theoretical foundations of sequential retrieval and multi-memory integration remain limited, with existing studies largely relying on numerical evidence. This work develops a dynamical theory of sequential reasoning in Hopfield networks. We consider the recently proposed input-driven plasticity (IDP) Hopfield network and analyze a two-timescale architecture coupling fast associative retrieval with slow reasoning dynamics. We derive explicit conditions for self-sustained memory transitions, including gain thresholds, escape times, and collapse regimes. Together, these results provide a principled mathematical account of sequentiality in associative memory models, bridging classical Hopfield dynamics and modern reasoning architectures.",
+          "published": "2026-03-03T17:54:36Z",
+          "updated": "2026-03-03T17:54:36Z",
+          "html_url": "https://arxiv.org/abs/2603.03201v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03201v1",
+          "summary": "本研究针对关联记忆模型中顺序检索与多记忆整合的理论基础薄弱问题，提出输入驱动可塑性Hopfield网络的动力学理论。通过构建快（关联检索）慢（推理动态）双时间尺度耦合"
+        },
+        {
+          "id": "2603.03179v1",
+          "title": "Energy-Optimal Allocation of Storage in Transmission Grid Networks",
+          "authors": [
+            "Emile Emery",
+            "Sébastien Aumaître",
+            "Hervé Bercegol"
+          ],
+          "abstract": "The deployment of renewable energy technologies supposes the connection to the power grid of many new, distributed, and variable electricity production facilities. Among the investments deeply needed for a successful shift to clean energy, electricity storage systems are key to provide power reliably, continuously and economically. Here, we are concerned with the energy that must be invested and embodied in storage devices and in production oversizing to cope with natural variations of renewable electricity production, and compensate for any gap between production and consumption. We developed a model to analyze the variation of energy expenses with the location in the grid, capacity of storage and production oversizing. We apply it to a time scale of fluctuations of a few hours that can be taken care of by Li-ion batteries to calculate the optimal storage capacity and production oversizing yielding a maximum value of the ESOI ratio [Energy Stored On energy Invested] at a given satisfaction rate of customer demand. We evaluate these values for a rescaled present-time French power mix and two idealized zero-emission mixes (100% PV and 100% wind). In parallel, using a recently developed model of French transmission grid, a centrality-based analysis shows that locating storage at nodes of maximal installed power minimizes additional Joule losses. These results generalize existing grid-level energy return frameworks to incorporate storage sizing, placement, and transmission losses into a unified assessment of future power grid configurations.",
+          "published": "2026-03-03T17:39:57Z",
+          "updated": "2026-03-03T17:39:57Z",
+          "html_url": "https://arxiv.org/abs/2603.03179v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03179v1",
+          "summary": "本文研究如何优化电网中储能系统的配置与发电冗余，以应对可再生能源波动导致的供需失衡。作者建立模型分析储能容量、发电冗余与地理位置对能量投资回报比（ESOI）的影响，并以法国电网为例，"
+        },
+        {
+          "id": "2603.03162v1",
+          "title": "Dynamically Emergent Correlations",
+          "authors": [
+            "Satya N. Majumdar",
+            "Gregory Schehr"
+          ],
+          "abstract": "In this perspective article, we discuss the scenario of dynamically emergent correlation (DEC) arising in classical and quantum noninteracting systems when they are subjected to a common fluctuating stochastic environment. The key property of such systems is that the strong correlations between different particles emerge from the dynamics and not from built-in interactions. In many cases, these strong correlations persist even at long times in the stationary state. Computing observables explicitly for such strongly correlated states in general is very hard. Remarkably, the stationary states in several models of DEC exhibit an interesting analytical structure that allows to compute physical observables, despite being strongly correlated. Recent experiments on trapped colloidal particles have established that these DEC in the stationary state can in fact be measured. DEC is a rapidly emerging domain of strongly correlated out-of-equilibrium statistical physics, with both theoretical and experimental, as well as classical and quantum, components.",
+          "published": "2026-03-03T17:10:13Z",
+          "updated": "2026-03-03T17:10:13Z",
+          "html_url": "https://arxiv.org/abs/2603.03162v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03162v1",
+          "summary": "In this perspective article, we discuss the scenario of dynamically emergent correlation (DEC) arising in classical and quantum noninteracting systems when they are subjected to a common fluctuating stochastic environ..."
+        },
+        {
+          "id": "2603.03103v1",
+          "title": "Tripartite information of two-dimensional free fermions: a sine-kernel spectral constant from Fermi surface geometry",
+          "authors": [
+            "Aleksandrs Sokolovs"
+          ],
+          "abstract": "We show that monogamy of mutual information (MMI) in free-fermion ground states is a property of the observation scale, not of the quantum state. For three adjacent strips of width $w$ on a two-dimensional lattice, translation invariance decomposes the tripartite information as $I_3 = \\sum_{k_y} g(k_F(k_y)\\, w)$, where $g(z)$ is a universal function of the dimensionless product $z = k_F w$, determined by the spectrum of the sine-kernel integral operator (the Slepian concentration operator). We prove that $g(z)$ has a unique zero at $z^* \\approx 1.329$: modes with $k_F w < z^*$ violate MMI ($g > 0$), while modes with $k_F w > z^*$ satisfy it ($g < 0$). Since $z^* / k_F w \\to 0$ as $w \\to \\infty$, any Fermi surface eventually satisfies MMI at large $w$, while any gapless system violates it at sufficiently small $w$. The classification of states as \"holographic\" or \"non-holographic\" by the sign of $I_3$ is thus scale-dependent. We establish the properties of $g(z)$ analytically and show that $z^*$ is determined to $0.12\\%$ by the cancellation of only two Slepian eigenvalue contributions. For Rényi entropies with index $α> 1$, the function $g_α(z)$ oscillates with multiple sign changes. We verify the framework on square and triangular lattices and show that interactions shift $z^*$ by $\\sim 1$--$2\\%$.",
+          "published": "2026-03-03T15:39:35Z",
+          "updated": "2026-03-03T15:39:35Z",
+          "html_url": "https://arxiv.org/abs/2603.03103v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03103v1",
+          "summary": "We show that monogamy of mutual information (MMI) in free-fermion ground states is a property of the observation scale, not of the quantum state. For three adjacent strips of width $w$ on a two-dimensional lattice, tr..."
+        },
+        {
+          "id": "2603.03057v1",
+          "title": "A composite electron-lattice order: electronic nematicity of 2DEG and polarization density waves at a near-ferroelectric interface",
+          "authors": [
+            "Fei Yang",
+            "Zhi-Yang Wang",
+            "Long-Qing Chen"
+          ],
+          "abstract": "We consider a two-dimensional electron gas (2DEG) formed at a near-ferroelectric interface and strongly coupled to polar phonons. Through a self-consistent microscopic many-body calculation, we show that the coupled system stabilizes a composite electron-lattice ordered state in which the lattice polarization spontaneously forms a polarization density wave (PDW), accompanied by an electronic stripe order in the 2DEG. This intertwined order partially reconstructs the electronic spectrum and generates a twofold quasiparticle anisotropy, giving rise to electronic nematicity at the single-particle level. However, under strong external electric fields, the nematic response becomes dominated by the collective sliding dynamics of the composite order: the sliding motion overwhelms the quasiparticle anisotropy and produces a strongly enhanced nematic signal with higher-order angular harmonics. The theory offers a natural explanation for several anomalous transport and anisotropic responses recently observed at the KTaO$_3$ (111) interface. We also estimate the mean-field transition temperature of this emergent ordered state, obtaining good agreement with experiments, and analyze its evolution with several tuning parameters. The proposed composite order, along with the field-induced crossover from quasiparticle-driven to sliding-dominated nematicity, provides a distinct mechanism of nematicity arising from many-body effects and collective dynamics in critical electron-boson systems, with applicability beyond ferroelectric platforms.",
+          "published": "2026-03-03T14:54:25Z",
+          "updated": "2026-03-03T14:54:25Z",
+          "html_url": "https://arxiv.org/abs/2603.03057v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03057v1",
+          "summary": "We consider a two-dimensional electron gas (2DEG) formed at a near-ferroelectric interface and strongly coupled to polar phonons. Through a self-consistent microscopic many-body calculation, we show that the coupled s..."
+        }
+      ]
+    },
+    {
+      "name": "Quantum Computing",
+      "query": "cat:quant-ph OR all:\"quantum computing\" OR all:\"quantum algorithm\" OR all:\"quantum error correction\"",
+      "papers": [
+        {
+          "id": "2603.03263v1",
+          "title": "Generalised All-Optical Cat Correction",
+          "authors": [
+            "Ari John Boon",
+            "Olivier Landon-Cardinal",
+            "Nicolás Quesada"
+          ],
+          "abstract": "We have generalised an all-optical telecorrection protocol for the higher orders of the cat code, and show that with these higher orders we can achieve target performance at substantially reduced iteration counts at the cost of a higher mean photon-number. We also introduce a probabilistic scheme for correcting deformation of the state, which highlights two interesting abilities of telecorrection: to encode new sets of transformations, and to change the basis of the code. We find that for a target channel fidelity of $99.9\\%$ over a channel with $1\\text{ dB}$ of loss, a third-order cat code requires $70$ times fewer telecorrection iterations than a first-order one, at a cost of a $3.6$-fold increase in mean photon-number.",
+          "published": "2026-03-03T18:53:54Z",
+          "updated": "2026-03-03T18:53:54Z",
+          "html_url": "https://arxiv.org/abs/2603.03263v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03263v1",
+          "summary": "该研究针对量子通信中猫态码纠"
+        },
+        {
+          "id": "2603.03240v1",
+          "title": "Anomalous Klein tunnelling with magnetic barriers in strained graphene",
+          "authors": [
+            "Edgardo Marin-Colli",
+            "Tonatiuh Gómez-Ramírez",
+            "O-Excell Gutierrez",
+            "Yonatan Betancur-Ocampo",
+            "Alfredo Raya",
+            "Erik Díaz-Bautista"
+          ],
+          "abstract": "We study electron transport in a strained graphene sheet subjected to a sequence of $N$ electrostatic and magnetic barriers. Employing a modified and improved transfer-matrix framework, we examine how the transmission and reflection coefficients evolve with variations in uniaxial strain and in the number of barriers. The interplay of mechanical deformation and external magnetic fields is found to generate an anomalous Klein tunnelling, allowing the conductance to be effectively modulated through strain and barrier configurations. These findings highlight the role of strain engineering and magnetic field modulation as powerful tools for tailoring charge transport in two-dimensional materials. More broadly, they underscore how mechanical and electromagnetic control can be used to design next-generation solid-state devices with tunable electronic properties.",
+          "published": "2026-03-03T18:32:44Z",
+          "updated": "2026-03-03T18:32:44Z",
+          "html_url": "https://arxiv.org/abs/2603.03240v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03240v1",
+          "summary": "该研究探讨了应变石墨烯在静电与磁势垒"
+        },
+        {
+          "id": "2603.03225v1",
+          "title": "Multiparty Quantum Key Agreement: Architectures, State-of-the-art, and Open Problems",
+          "authors": [
+            "Malik Mouaji",
+            "Saif Al-Kuwari"
+          ],
+          "abstract": "Multiparty quantum key agreement (MQKA) enables $n \\geq 3$ mutually distrustful users to establish a shared secret key through collaborative quantum protocols. In this paper, we provide a comprehensive review where we argue that MQKA is best understood as a design space organized along three orthogonal but tightly coupled axes: (1) network architecture, which determines how quantum states flow between participants; (2) quantum resources, which encode the physical degrees of freedom used for implementation; and (3) security model, which defines trust assumptions about devices and infrastructure. Rather than treating MQKA as a linear sequence of isolated protocols, we develop this three-axis perspective to reveal recurrent patterns, sharp trade-offs, and unexplored design spaces. We classify MQKA protocols into structural families, map them to underlying quantum resources, and analyze how different security models shape fairness and collusion resistance. We further identify open challenges in composable security frameworks, network native integration, device-independent implementations, and propose a research roadmap toward hybrid-resource, bosonic-code-encoded, and fairness-aware MQKA suitable for the future quantum internet deployments in the post-NISQ era.",
+          "published": "2026-03-03T18:17:34Z",
+          "updated": "2026-03-03T18:17:34Z",
+          "html_url": "https://arxiv.org/abs/2603.03225v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03225v1",
+          "summary": "本文为多方量子密钥协商（MQKA"
+        },
+        {
+          "id": "2603.03217v1",
+          "title": "Recovery-Induced Erasure Attack on QKD Systems",
+          "authors": [
+            "Hashir Kuniyil",
+            "Asad Ali",
+            "Syed M. Arslan",
+            "Muhammad Talha Rahim",
+            "Artur Czerwinski",
+            "Saif Al Kuwari"
+          ],
+          "abstract": "Detector dead time is typically treated as a fixed parameter in quantum key distribution (QKD) security analyses. In practice, however, the effective recovery time of single-photon avalanche photodiodes (SPADs) depends on the incident count rate. In this work, we demonstrate that this count-rate-dependent recovery nonlinearity constitutes a distinct attack primitive. We experimentally characterize the dead time shift of a free-running SPAD under controlled broadband loading and observe a substantial increase in effective recovery time as the detected rate rises into the high photon count regime. We show that recovery-induced availability reduction can be modeled as an adversarial erasure channel and derive a conservative bound on the signal detection probability under loading. Unlike previously studied detector-control or efficiency mismatch attacks, the proposed mechanism does not rely on deterministic blinding or timing discrimination. Instead, count-rate-dependent recovery asymmetry induces basis-dependent suppression of detection probabilities ($p_\\perp<p_\\parallel$), converting mismatch-induced errors into loss. Particularly, we show in active-basis BBM92 systems, this effect reduces the observed quantum bit error rate (QBER) below the abort threshold while increasing erasure probability. Using experimentally measured detector recovery data, we quantify the parameter regime in which such stealth suppression is achievable. These results establish count-rate-dependent detector recovery as a security-relevant vulnerability and show that countermeasures designed for timing-based efficiency mismatch do not directly address recovery-induced erasure (RIE) attack. Our findings underscore the need to incorporate detector recovery dynamics explicitly into practical QKD security models.",
+          "published": "2026-03-03T18:08:56Z",
+          "updated": "2026-03-03T18:08:56Z",
+          "html_url": "https://arxiv.org/abs/2603.03217v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03217v1",
+          "summary": "该研究揭示量子密钥分发系统中单光子雪崩光电二极管因计数率依赖的恢复非线性"
+        },
+        {
+          "id": "2603.03186v1",
+          "title": "Simultaneous anti-bunched and super-bunched photons from a GaAs Quantum dot in a dielectric metasurface",
+          "authors": [
+            "Sanghyeok Park",
+            "Oleg Mitrofanov",
+            "Kusal M. Abeywickrama",
+            "Samuel Prescott",
+            "Jaeyeon Yu",
+            "Stephanie C Malek",
+            "Hyunseung Jung",
+            "Emma Renteria",
+            "Sadhvikas Addamane",
+            "Alisa Javadi",
+            "Igal Brener",
+            "Prasad P Iyer"
+          ],
+          "abstract": "Semiconductor quantum dots host a rich manifold of excitonic complexes, including neutral excitons that emit anti-bunched single photons and charged exciton complexes capable of producing super-bunched photons via cascade emission. Accessing both emission regimes from a single emitter would open routes to novel quantum protocols, including advanced quantum imaging. In practice, however, emission from charged exciton complexes is intrinsically weak, often orders of magnitude dimmer than neutral excitons, placing simultaneous dual-mode operation out of reach. Here, we overcome this limitation by embedding the quantum dot in a dielectric Mie-resonant metasurface that provides order-of-magnitude photoluminescence enhancement across both neutral and charged exciton transitions of a single GaAs quantum dot. Under identical non-resonant pumping conditions, the emission from the neutral exciton yields anti-bunched emission ($g^{(2)}(0) < 0.5$) and the emission from positively charged exciton complexes shows super-bunched emission ($g^{(2)}(0) > 3.5$) with comparable count rates (~12 kHz). Crucially, super-bunching emerges only when charged exciton emission spectrally overlaps with the Mie resonances and vanishes in un-patterned slabs, demonstrating that photonic engineering, is essential for accessing these weak quantum light states. These results demonstrate a scalable, position-tolerant platform for harnessing the full excitonic structure of solid-state emitters.",
+          "published": "2026-03-03T17:45:36Z",
+          "updated": "2026-03-03T17:45:36Z",
+          "html_url": "https://arxiv.org/abs/2603.03186v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03186v1",
+          "summary": "本研究旨在解决单量子点难以同时产生反聚束与超"
+        },
+        {
+          "id": "2603.03185v1",
+          "title": "Witnesses of non-Gaussian features as lower bounds of stellar rank",
+          "authors": [
+            "Jan Provazník",
+            "Šimon Bräuer",
+            "Vojtěch Kala",
+            "Jaromír Fiurášek",
+            "Petr Marek"
+          ],
+          "abstract": "Quantum non-Gaussian states and operations serve as fundamental resources for universal quantum computation, error correction, and high-precision metrology, extending beyond the Gaussian limits. While the stellar rank provides a rigorous hierarchical measure of non-Gaussianity, it remains challenging to determine experimentally. Conversely, witnesses of non-Gaussian features, based on the expectation values and variances of measurable observables, offer an accessible method for certifying non-Gaussian behavior but lack a direct connection to stellar rank. In this work, we establish a quantitative connection between these witnesses and stellar rank, demonstrating that the former can provide certifiable lower bounds on stellar rank. We introduce normalized expectation value and variance-based quantifiers and show that these witnesses form a consistent hierarchy of thresholds corresponding to stellar rank. Our results bridge the gap between abstract hierarchical measures and experimentally accessible quantifiers, enabling scalable certification of non-Gaussian states.",
+          "published": "2026-03-03T17:44:23Z",
+          "updated": "2026-03-03T17:44:23Z",
+          "html_url": "https://arxiv.org/abs/2603.03185v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03185v1",
+          "summary": "该研究旨在解决量子非高斯态层级度量（恒星秩）难以实验测定，而易于测量的非高斯特征见证又缺乏"
+        },
+        {
+          "id": "2603.03182v1",
+          "title": "Entanglement-Assisted Codes Outside the Stabilizer Framework",
+          "authors": [
+            "Jaszmine DeFranco",
+            "Andrew Nemec"
+          ],
+          "abstract": "We show how entanglement-assisted codes can be constructed from arbitrary quantum codes by associating them with quantum codes for erasure channels. If a subset of physical qubits is correctable for an erasure error, then it naturally forms the receiver's share of a bipartite state that can be used for entanglement-assisted communications, both in the noiseless and noisy ebit error models. In the case of degenerate codes, we show that the receiver's share of the bipartite state can sometimes be compressed, at the cost of potentially reduced error-correction ability in the noisy ebit error model. We also give examples of permutation-invariant and XP-stabilizer entanglement-assisted codes, the first outside of the stabilizer and codeword-stabilized frameworks.",
+          "published": "2026-03-03T17:42:12Z",
+          "updated": "2026-03-03T17:42:12Z",
+          "html_url": "https://arxiv.org/abs/2603.03182v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03182v1",
+          "summary": "We show how entanglement-assisted codes can be constructed from arbitrary quantum codes by associating them with quantum codes for erasure channels. If a subset of physical qubits is correctable for an erasure error,..."
+        },
+        {
+          "id": "2603.03157v1",
+          "title": "Achieving speedup in Dark Matter search experiments with a transmon-based NISQ algorithm",
+          "authors": [
+            "Roberto Moretti",
+            "Pietro Campana",
+            "Rodolfo Carobene",
+            "Alessandro Cattaneo",
+            "Marco Gobbo",
+            "Danilo Labranca",
+            "Matteo Borghesi",
+            "Marco Faverzani",
+            "Elena Ferri",
+            "Sara Gamba",
+            "Angelo Nucciotti",
+            "Andrea Giachero"
+          ],
+          "abstract": "Coherent detection of ultralight bosonic dark matter can be achieved by monitoring slow Rabi oscillations in superconducting qubits. We introduce an ancilla-assisted, gate-based protocol that enhances sensitivity to the hidden photon kinetic mixing parameter $ε$ using a single two-qubit gate, bypassing the need to maintain long-lived multi-qubit entangled states and remaining compatible with the limitations of modern quantum hardware. We characterized the increase in sensitivity accounting for decoherence, thermal occupation, errors in readout and reset, indicating up to a ten-fold reduction in the required integration time to reach the same exclusion limit on $ε$ achievable via Rabi-sampling experiments. Under plausible hardware assumptions and three years of data taking, the projected $95\\%$ C.L. exclusion limit on the hidden photon mixing parameter reaches $ε\\approx 1\\times 10^{-14}$ across $2.5$-$6.0$ GHz ($10$-$25$ \\textmu eV).",
+          "published": "2026-03-03T16:59:01Z",
+          "updated": "2026-03-03T16:59:01Z",
+          "html_url": "https://arxiv.org/abs/2603.03157v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03157v1",
+          "summary": "Coherent detection of ultralight bosonic dark matter can be achieved by monitoring slow Rabi oscillations in superconducting qubits. We introduce an ancilla-assisted, gate-based protocol that enhances sensitivity to t..."
+        },
+        {
+          "id": "2603.03149v1",
+          "title": "Efficient Image Reconstruction Architecture for Neutral Atom Quantum Computing",
+          "authors": [
+            "Jonas Winklmann",
+            "Yian Yu",
+            "Xiaorang Guo",
+            "Korbinian Staudacher",
+            "Martin Schulz"
+          ],
+          "abstract": "In recent years, neutral atom quantum computers (NAQCs) have attracted a lot of attention, primarily due to their long coherence times and good scalability. One of their main drawbacks is their comparatively time-consuming control overhead, with one of the main contributing procedures being the detection of individual atoms and measurement of their states, each occurring at least once per compute cycle and requiring fluorescence imaging and subsequent image analysis. To reduce the required time budget, we propose a highly-parallel atom-detection accelerator for tweezer-based NAQCs. Building on an existing solution, our design combines algorithm-level optimization with a field-programmable gate array (FPGA) implementation to maximize parallelism and reduce the run time of the image analysis process. Our design can analyze a 256$\\times$256-pixel image representing a 10$\\times$10 atom array in just 115 $μ$s on a Xilinx UltraScale+ FPGA. Compared to the original CPU baseline and our optimized CPU version, we achieve about 34.9$\\times$ and 6.3$\\times$ speedup of the reconstruction time, respectively. Moreover, this work also contributes to the ongoing efforts toward fully integrated FPGA-based control systems for NAQCs.",
+          "published": "2026-03-03T16:40:24Z",
+          "updated": "2026-03-03T16:40:24Z",
+          "html_url": "https://arxiv.org/abs/2603.03149v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03149v1",
+          "summary": "In recent years, neutral atom quantum computers (NAQCs) have attracted a lot of attention, primarily due to their long coherence times and good scalability."
+        },
+        {
+          "id": "2603.03109v1",
+          "title": "Quantum-Inspired Hamiltonian Feature Extraction for ADMET Prediction: A Simulation Study",
+          "authors": [
+            "B. Maurice Benson",
+            "Kendall Byler",
+            "Anna Petroff",
+            "Shahar Keinan",
+            "William J Shipman"
+          ],
+          "abstract": "Predicting absorption, distribution, metabolism, excretion, and toxicity (ADMET) properties remains a critical bottleneck in drug discovery. While molecular fingerprints effectively capture local structural features, they struggle to represent higher-order correlations among molecular substructures. We present a quantum-inspired feature extraction method that encodes molecular fingerprints into a parameterized Hamiltonian, using mutual information (MI) to guide entanglement structure. By simulating quantum evolution on GPU-accelerated backends, we extract expectation values that capture pairwise and triadic correlations among fingerprint bits. On ten Therapeutic Data Commons (TDC) ADMET benchmarks, our method achieves state-of-the-art performance on CYP3A4 substrate prediction (AUROC 0.673 0.004) and improves over classical baselines on 8/10 tasks. SHAP (SHapley Additive exPlanations) analysis reveals that quantum-derived features contribute up to 33% of model importance despite comprising only 1.6% of features, demonstrating that Hamiltonian encoding concentrates predictive signal. This simulation study establishes the foundation for hardware validation on near-term quantum devices.",
+          "published": "2026-03-03T15:42:33Z",
+          "updated": "2026-03-03T15:42:33Z",
+          "html_url": "https://arxiv.org/abs/2603.03109v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03109v1",
+          "summary": "Predicting absorption, distribution, metabolism, excretion, and toxicity (ADMET) properties remains a critical bottleneck in drug discovery. While molecular fingerprints effectively capture local structural features,..."
+        }
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "query": "cat:cs.LG OR cat:stat.ML OR cat:cs.AI OR all:\"machine learning\" OR all:\"deep learning\"",
+      "papers": [
+        {
+          "id": "2603.03281v1",
+          "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
+          "authors": [
+            "Hanyang Wang",
+            "Yiyang Liu",
+            "Jiawei Chi",
+            "Fangfu Liu",
+            "Ran Xue",
+            "Yueqi Duan"
+          ],
+          "abstract": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG as a control applied to the first-order continuous-time generative flow, using the conditional-unconditional discrepancy as an error signal to adjust the velocity field. From this perspective, we summarize vanilla CFG as a proportional controller (P-control) with fixed gain, and typical follow-up variants develop extended control-law designs derived from it. However, existing methods mainly rely on linear control, inherently leading to instability, overshooting, and degraded semantic fidelity especially on large guidance scales. To address this, we introduce Sliding Mode Control CFG (SMC-CFG), which enforces the generative flow toward a rapidly convergent sliding manifold. Specifically, we define an exponential sliding mode surface over the semantic prediction error and introduce a switching control term to establish nonlinear feedback-guided correction. Moreover, we provide a Lyapunov stability analysis to theoretically support finite-time convergence. Experiments across text-to-image generation models including Stable Diffusion 3.5, Flux, and Qwen-Image demonstrate that SMC-CFG outperforms standard CFG in semantic alignment and enhances robustness across a wide range of guidance scales. Project Page: https://hanyang-21.github.io/CFG-Ctrl",
+          "published": "2026-03-03T18:59:48Z",
+          "updated": "2026-03-03T18:59:48Z",
+          "html_url": "https://arxiv.org/abs/2603.03281v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03281v1",
+          "summary": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG a..."
+        },
+        {
+          "id": "2603.03280v1",
+          "title": "How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference",
+          "authors": [
+            "Toru Lin",
+            "Shuying Deng",
+            "Zhao-Heng Yin",
+            "Pieter Abbeel",
+            "Jitendra Malik"
+          ],
+          "abstract": "Many essential manipulation tasks - such as food preparation, surgery, and craftsmanship - remain intractable for autonomous robots. These tasks are characterized not only by contact-rich, force-sensitive dynamics, but also by their \"implicit\" success criteria: unlike pick-and-place, task quality in these domains is continuous and subjective (e.g. how well a potato is peeled), making quantitative evaluation and reward engineering difficult. We present a learning framework for such tasks, using peeling with a knife as a representative example. Our approach follows a two-stage pipeline: first, we learn a robust initial policy via force-aware data collection and imitation learning, enabling generalization across object variations; second, we refine the policy through preference-based finetuning using a learned reward model that combines quantitative task metrics with qualitative human feedback, aligning policy behavior with human notions of task quality. Using only 50-200 peeling trajectories, our system achieves over 90% average success rates on challenging produce including cucumbers, apples, and potatoes, with performance improving by up to 40% through preference-based finetuning. Remarkably, policies trained on a single produce category exhibit strong zero-shot generalization to unseen in-category instances and to out-of-distribution produce from different categories while maintaining over 90% success rates.",
+          "published": "2026-03-03T18:59:32Z",
+          "updated": "2026-03-03T18:59:32Z",
+          "html_url": "https://arxiv.org/abs/2603.03280v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03280v1",
+          "summary": "Many essential manipulation tasks - such as food preparation, surgery, and craftsmanship - remain intractable for autonomous robots. These tasks are characterized not only by contact-rich, force-sensitive dynamics, bu..."
+        },
+        {
+          "id": "2603.03278v1",
+          "title": "Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping",
+          "authors": [
+            "William Liang",
+            "Sam Wang",
+            "Hung-Ju Wang",
+            "Osbert Bastani",
+            "Yecheng Jason Ma",
+            "Dinesh Jayaraman"
+          ],
+          "abstract": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations. However, realizing such \"play\" requires (1) a policy robust to diverse, potentially out-of-distribution environment states, and (2) a procedure that continuously produces useful robot experience. To address these challenges, we introduce Tether, a method for autonomous functional play involving structured, task-directed interactions. First, we design a novel open-loop policy that warps actions from a small set of source demonstrations (<=10) by anchoring them to semantic keypoint correspondences in the target scene. We show that this design is extremely data-efficient and robust even under significant spatial and semantic variations. Second, we deploy this policy for autonomous functional play in the real world via a continuous cycle of task selection, execution, evaluation, and improvement, guided by the visual understanding capabilities of vision-language models. This procedure generates diverse, high-quality datasets with minimal human intervention. In a household-like multi-object setup, our method is the first to perform many hours of autonomous multi-task play in the real world starting from only a handful of demonstrations. This produces a stream of data that consistently improves the performance of closed-loop imitation policies over time, ultimately yielding over 1000 expert-level trajectories and training policies competitive with those learned from human-collected demonstrations.",
+          "published": "2026-03-03T18:59:07Z",
+          "updated": "2026-03-03T18:59:07Z",
+          "html_url": "https://arxiv.org/abs/2603.03278v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03278v1",
+          "summary": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations."
+        },
+        {
+          "id": "2603.03275v1",
+          "title": "Learning Demographic-Conditioned Mobility Trajectories with Aggregate Supervision",
+          "authors": [
+            "Jessie Z. Li",
+            "Zhiqing Hong",
+            "Toru Shirakawa",
+            "Serina Chang"
+          ],
+          "abstract": "Human mobility trajectories are widely studied in public health and social science, where different demographic groups exhibit significantly different mobility patterns. However, existing trajectory generation models rarely capture this heterogeneity because most trajectory datasets lack demographic labels. To address this gap in data, we propose ATLAS, a weakly supervised approach for demographic-conditioned trajectory generation using only (i) individual trajectories without demographic labels, (ii) region-level aggregated mobility features, and (iii) region-level demographic compositions from census data. ATLAS trains a trajectory generator and fine-tunes it so that simulated mobility matches observed regional aggregates while conditioning on demographics. Experiments on real trajectory data with demographic labels show that ATLAS substantially improves demographic realism over baselines (JSD $\\downarrow$ 12%--69%) and closes much of the gap to strongly supervised training. We further develop theoretical analyses for when and why ATLAS works, identifying key factors including demographic diversity across regions and the informativeness of the aggregate feature, paired with experiments demonstrating the practical implications of our theory. We release our code at https://github.com/schang-lab/ATLAS.",
+          "published": "2026-03-03T18:57:44Z",
+          "updated": "2026-03-03T18:57:44Z",
+          "html_url": "https://arxiv.org/abs/2603.03275v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03275v1",
+          "summary": "Human mobility trajectories are widely studied in public health and social science, where different demographic groups exhibit significantly different mobility patterns."
+        },
+        {
+          "id": "2603.03270v1",
+          "title": "Gravity Falls: A Comparative Analysis of Domain-Generation Algorithm (DGA) Detection Methods for Mobile Device Spearphishing",
+          "authors": [
+            "Adam Dorian Wong",
+            "John D. Hastings"
+          ],
+          "abstract": "Mobile devices are frequent targets of eCrime threat actors through SMS spearphishing (smishing) links that leverage Domain Generation Algorithms (DGA) to rotate hostile infrastructure. Despite this, DGA research and evaluation largely emphasize malware C2 and email phishing datasets, leaving limited evidence on how well detectors generalize to smishing-driven domain tactics outside enterprise perimeters. This work addresses that gap by evaluating traditional and machine-learning DGA detectors against Gravity Falls, a new semi-synthetic dataset derived from smishing links delivered between 2022 and 2025. Gravity Falls captures a single threat actor's evolution across four technique clusters, shifting from short randomized strings to dictionary concatenation and themed combo-squatting variants used for credential theft and fee/fine fraud. Two string-analysis approaches (Shannon entropy and Exp0se) and two ML-based detectors (an LSTM classifier and COSSAS DGAD) are assessed using Top-1M domains as benign baselines. Results are strongly tactic-dependent: performance is highest on randomized-string domains but drops on dictionary concatenation and themed combo-squatting, with low recall across multiple tool/cluster pairings. Overall, both traditional heuristics and recent ML detectors are ill-suited for consistently evolving DGA tactics observed in Gravity Falls, motivating more context-aware approaches and providing a reproducible benchmark for future evaluation.",
+          "published": "2026-03-03T18:55:44Z",
+          "updated": "2026-03-03T18:55:44Z",
+          "html_url": "https://arxiv.org/abs/2603.03270v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03270v1",
+          "summary": "本研究评估了针对移动设备短信钓鱼中域名生成算法的检测方法。针对现有研究缺乏对短信钓鱼场景DGA检测评估的问题，研究者利用2022-2025年间短信钓鱼链接构建的半合成数据集Gravity Falls，测试了两种基于字符串分析的启发式方法和两种机器学习检测器的性能。结果显示，"
+        },
+        {
+          "id": "2603.03269v1",
+          "title": "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory",
+          "authors": [
+            "Junyi Zhang",
+            "Charles Herrmann",
+            "Junhwa Hur",
+            "Chen Sun",
+            "Ming-Hsuan Yang",
+            "Forrester Cole",
+            "Trevor Darrell",
+            "Deqing Sun"
+          ],
+          "abstract": "Feedforward geometric foundation models achieve strong short-window reconstruction, yet scaling them to minutes-long videos is bottlenecked by quadratic attention complexity or limited effective memory in recurrent designs. We present LoGeR (Long-context Geometric Reconstruction), a novel architecture that scales dense 3D reconstruction to extremely long sequences without post-optimization. LoGeR processes video streams in chunks, leveraging strong bidirectional priors for high-fidelity intra-chunk reasoning. To manage the critical challenge of coherence across chunk boundaries, we propose a learning-based hybrid memory module. This dual-component system combines a parametric Test-Time Training (TTT) memory to anchor the global coordinate frame and prevent scale drift, alongside a non-parametric Sliding Window Attention (SWA) mechanism to preserve uncompressed context for high-precision adjacent alignment. Remarkably, this memory architecture enables LoGeR to be trained on sequences of 128 frames, and generalize up to thousands of frames during inference. Evaluated across standard benchmarks and a newly repurposed VBR dataset with sequences of up to 19k frames, LoGeR substantially outperforms prior state-of-the-art feedforward methods--reducing ATE on KITTI by over 74%--and achieves robust, globally consistent reconstruction over unprecedented horizons.",
+          "published": "2026-03-03T18:55:37Z",
+          "updated": "2026-03-03T18:55:37Z",
+          "html_url": "https://arxiv.org/abs/2603.03269v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03269v1",
+          "summary": "Feedforward geometric foundation models achieve strong short-window reconstruction, yet scaling them to minutes-long videos is bottlenecked by quadratic attention complexity or limited effective memory in recurrent de..."
+        },
+        {
+          "id": "2603.03259v1",
+          "title": "Physics-informed post-processing of stabilized finite element solutions for transient convection-dominated problems",
+          "authors": [
+            "Süleyman Cengizci",
+            "Ömür Uğur",
+            "Srinivasan Natesan"
+          ],
+          "abstract": "The numerical simulation of convection-dominated transient transport phenomena poses significant computational challenges due to sharp gradients and propagating fronts across the spatiotemporal domain. Classical discretization methods often generate spurious oscillations, requiring advanced stabilization techniques. However, even stabilized finite element methods may require additional regularization to accurately resolve localized steep layers. On the other hand, standalone physics-informed neural networks (PINNs) struggle to capture sharp solution structures in convection-dominated regimes and typically require a large number of training epochs. This work presents a hybrid computational framework that extends the PINN-Augmented SUPG with Shock-Capturing (PASSC) methodology from steady to unsteady problems. The approach combines a semi-discrete stabilized finite element method with a PINN-based correction strategy for transient convection-diffusion-reaction equations. Stabilization is achieved using the Streamline-Upwind Petrov-Galerkin (SUPG) formulation augmented with a YZbeta shock-capturing operator. Rather than training over the entire space-time domain, the neural network is applied selectively near the terminal time, enhancing the finite element solution using the last K_s temporal snapshots while enforcing residual constraints from the governing equations and boundary conditions. The network incorporates residual blocks with random Fourier features and employs progressive training with adaptive loss weighting. Numerical experiments on five benchmark problems, including boundary and interior layers, traveling waves, and nonlinear Burgers dynamics, demonstrate significant accuracy improvements at the terminal time compared to standalone stabilized finite element solutions.",
+          "published": "2026-03-03T18:51:17Z",
+          "updated": "2026-03-03T18:51:17Z",
+          "html_url": "https://arxiv.org/abs/2603.03259v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03259v1",
+          "summary": "The numerical simulation of convection-dominated transient transport phenomena poses significant computational challenges due to sharp gradients and propagating fronts across the spatiotemporal domain."
+        },
+        {
+          "id": "2603.03258v1",
+          "title": "Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals",
+          "authors": [
+            "Achyutha Menon",
+            "Magnus Saebo",
+            "Tyler Crosse",
+            "Spencer Gibson",
+            "Eyon Jang",
+            "Diogo Cruz"
+          ],
+          "abstract": "The accelerating adoption of language models (LMs) as agents for deployment in long-context tasks motivates a thorough understanding of goal drift: agents' tendency to deviate from an original objective. While prior-generation language model agents have been shown to be susceptible to drift, the extent to which drift affects more recent models remains unclear. In this work, we provide an updated characterization of the extent and causes of goal drift. We investigate drift in state-of-the-art models within a simulated stock-trading environment (Arike et al., 2025). These models are largely shown to be robust even when subjected to adversarial pressure. We show, however, that this robustness is brittle: across multiple settings, the same models often inherit drift when conditioned on prefilled trajectories from weaker agents. The extent of conditioning-induced drift varies significantly by model family, with only GPT-5.1 maintaining consistent resilience among tested models. We find that drift behavior is inconsistent between prompt variations and correlates poorly with instruction hierarchy following behavior, with strong hierarchy following failing to reliably predict resistance to drift. Finally, we run analogous experiments in a new emergency room triage environment to show preliminary evidence for the transferability of our results across qualitatively different settings. Our findings underscore the continued vulnerability of modern LM agents to contextual pressures and the need for refined post-training techniques to mitigate this.",
+          "published": "2026-03-03T18:50:59Z",
+          "updated": "2026-03-03T18:50:59Z",
+          "html_url": "https://arxiv.org/abs/2603.03258v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03258v1",
+          "summary": "The accelerating adoption of language models (LMs) as agents for deployment in long-context tasks motivates a thorough understanding of goal drift: agents' tendency to deviate from an original objective."
+        },
+        {
+          "id": "2603.03252v1",
+          "title": "Valet: A Standardized Testbed of Traditional Imperfect-Information Card Games",
+          "authors": [
+            "Mark Goadrich",
+            "Achille Morenville",
+            "Éric Piette"
+          ],
+          "abstract": "AI algorithms for imperfect-information games are typically compared using performance metrics on individual games, making it difficult to assess robustness across game choices. Card games are a natural domain for imperfect information due to hidden hands and stochastic draws. To facilitate comparative research on imperfect-information game-playing algorithms and game systems, we introduce Valet, a diverse and comprehensive testbed of 21 traditional imperfect-information card games. These games span multiple genres, cultures, player counts, deck structures, mechanics, winning conditions, and methods of hiding and revealing information. To standardize implementations across systems, we encode the rules of each game in RECYCLE, a card game description language. We empirically characterize each game's branching factor and duration using random simulations, reporting baseline score distributions for a Monte Carlo Tree Search player against random opponents to demonstrate the suitability of Valet as a benchmarking suite.",
+          "published": "2026-03-03T18:46:47Z",
+          "updated": "2026-03-03T18:46:47Z",
+          "html_url": "https://arxiv.org/abs/2603.03252v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03252v1",
+          "summary": "当前不完美信息博弈的AI算法多基于单一游戏评估，难以衡量其跨游戏鲁棒性。为此，本研究提出 Valet 测试平台，汇集21款涵盖多样机制"
+        },
+        {
+          "id": "2603.03251v1",
+          "title": "Speculative Speculative Decoding",
+          "authors": [
+            "Tanishq Kumar",
+            "Tri Dao",
+            "Avner May"
+          ],
+          "abstract": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, and then verifying them in parallel with a single target model forward pass. However, speculative decoding itself relies on a sequential dependence between speculation and verification. We introduce speculative speculative decoding (SSD) to parallelize these operations. While a verification is ongoing, the draft model predicts likely verification outcomes and prepares speculations pre-emptively for them. If the actual verification outcome is then in the predicted set, a speculation can be returned immediately, eliminating drafting overhead entirely. We identify three key challenges presented by speculative speculative decoding, and suggest principled methods to solve each. The result is Saguaro, an optimized SSD algorithm. Our implementation is up to 2x faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open source inference engines.",
+          "published": "2026-03-03T18:41:32Z",
+          "updated": "2026-03-03T18:41:32Z",
+          "html_url": "https://arxiv.org/abs/2603.03251v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03251v1",
+          "summary": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target mode..."
+        }
+      ]
+    },
+    {
+      "name": "DeepMind Researchers Watchlist",
+      "query": "au:\"David Silver\" OR au:\"Demis Hassabis\" OR au:\"Koray Kavukcuoglu\" OR au:\"Oriol Vinyals\" OR au:\"Petar Velickovic\" OR au:\"Nando de Freitas\" OR au:\"Pushmeet Kohli\" OR au:\"Yee Whye Teh\" OR au:\"Razvan Pascanu\"",
+      "papers": []
+    },
+    {
+      "name": "DeepMind Affiliation Keywords",
+      "query": "all:\"DeepMind\" OR all:\"Google DeepMind\"",
+      "papers": [
+        {
+          "id": "2603.02935v1",
+          "title": "Contextual Latent World Models for Offline Meta Reinforcement Learning",
+          "authors": [
+            "Mohammadreza Nakheai",
+            "Aidan Scannell",
+            "Kevin Luck",
+            "Joni Pajarinen"
+          ],
+          "abstract": "Offline meta-reinforcement learning seeks to learn policies that generalize across related tasks from fixed datasets. Context-based methods infer a task representation from transition histories, but learning effective task representations without supervision remains a challenge. In parallel, latent world models have demonstrated strong self-supervised representation learning through temporal consistency. We introduce contextual latent world models, which condition latent world models on inferred task representations and train them jointly with the context encoder. This enforces task-conditioned temporal consistency, yielding task representations that capture task-dependent dynamics rather than merely discriminating between tasks. Our method learns more expressive task representations and significantly improves generalization to unseen tasks across MuJoCo, Contextual-DeepMind Control, and Meta-World benchmarks.",
+          "published": "2026-03-03T12:45:20Z",
+          "updated": "2026-03-03T12:45:20Z",
+          "html_url": "https://arxiv.org/abs/2603.02935v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.02935v1",
+          "summary": "Offline meta-reinforcement learning seeks to learn policies that generalize across related tasks from fixed datasets. Context-based methods infer a task representation from transition histories, but learning effective..."
+        }
+      ]
+    },
+    {
+      "name": "Top Experts Watchlist (Cross-domain)",
+      "query": "au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Yann LeCun\" OR au:\"Michael I Jordan\" OR au:\"Richard Sutton\" OR au:\"Scott Aaronson\" OR au:\"John Preskill\" OR au:\"Peter Shor\" OR au:\"Seth Lloyd\" OR au:\"Subir Sachdev\" OR au:\"Giorgio Parisi\"",
+      "papers": [
+        {
+          "id": "2603.03276v1",
+          "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+          "authors": [
+            "Shengbang Tong",
+            "David Fan",
+            "John Nguyen",
+            "Ellis Brown",
+            "Gaoyue Zhou",
+            "Shengyi Qian",
+            "Boyang Zheng",
+            "Théophane Vallaeys",
+            "Junlin Han",
+            "Rob Fergus",
+            "Naila Murray",
+            "Marjan Ghazvininejad",
+            "Mike Lewis",
+            "Nicolas Ballas",
+            "Amir Bar",
+            "Michael Rabbat",
+            "Jakob Verbeek",
+            "Luke Zettlemoyer",
+            "Koustuv Sinha",
+            "Yann LeCun",
+            "Saining Xie"
+          ],
+          "abstract": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque. We provide empirical clarity through controlled, from-scratch pretraining experiments, isolating the factors that govern multimodal pretraining without interference from language pretraining. We adopt the Transfusion framework, using next-token prediction for language and diffusion for vision, to train on diverse data including text, video, image-text pairs, and even action-conditioned video. Our experiments yield four key insights: (i) Representation Autoencoder (RAE) provides an optimal unified visual representation by excelling at both visual understanding and generation; (ii) visual and language data are complementary and yield synergy for downstream capabilities; (iii) unified multimodal pretraining leads naturally to world modeling, with capabilities emerging from general training; and (iv) Mixture-of-Experts (MoE) enables efficient and effective multimodal scaling while naturally inducing modality specialization. Through IsoFLOP analysis, we compute scaling laws for both modalities and uncover a scaling asymmetry: vision is significantly more data-hungry than language. We demonstrate that the MoE architecture harmonizes this scaling asymmetry by providing the high model capacity required by language while accommodating the data-intensive nature of vision, paving the way for truly unified multimodal models.",
+          "published": "2026-03-03T18:58:00Z",
+          "updated": "2026-03-03T18:58:00Z",
+          "html_url": "https://arxiv.org/abs/2603.03276v1",
+          "pdf_url": "https://arxiv.org/pdf/2603.03276v1",
+          "summary": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque."
+        }
+      ]
+    }
+  ]
 }
