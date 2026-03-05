@@ -1,6 +1,1194 @@
 {
   "version": 1,
   "items": {
+    "2603.04389v1::deepseek-reasoner::150": {
+      "summary": "论文《Hyperuniform Disorder in Photonic Crystal Slabs with Intrinsic non-Hermiticity》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04388v1::deepseek-reasoner::150": {
+      "summary": "论文《Dynamic properties in a collisional model for confined granular fluids. A review》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04273v1::deepseek-reasoner::150": {
+      "summary": "论文《Kinetic Theory of Chiral Active Disks: Odd Transport and Torque Density》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04253v1::deepseek-reasoner::150": {
+      "summary": "论文《Emergent dimensional reduction in a distorted kagome magnet $\\mathrm{YCa_3(CrO)_3(BO_3)_4}$ driven by exchange hierarchy》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04251v1::deepseek-reasoner::150": {
+      "summary": "该研究针对高维非线性延迟系统振荡动力学的预测难题，探讨了结构复杂性与延迟反馈如何共同诱发网络振荡。研究者提出结合理论降维与数据驱动预测的分析框架，发现振荡源于结构与延迟的协同作用，",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04220v1::deepseek-reasoner::150": {
+      "summary": "论文《Non-equilibrium dynamics of the disordered Power of Two model》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04215v1::deepseek-reasoner::150": {
+      "summary": "本研究提出交互作用的分类体系，论证了图是一种焦点超图：每个图通过其闭邻域结构可规范地转化为焦点超图，且所有图动力学模型均为超图动力学模型的特殊情形。核心区别在于焦点交互（以指定参考节点定义作用域）与非焦点交互（所有参与者结构等价）。图的闭邻域即焦点超边，超边通过解除焦点约束推广",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04157v1::deepseek-reasoner::150": {
+      "summary": "本研究针对LJ38团簇双漏斗能量地貌导致热力学性质计算困难的问题，采用群体退火算法结合自适应温度策略进行系统采样。通过引入结构分辨分析框架，将淬火构型按能量与键序参数分类，识别出类FCC、类二十面体及类液体三个结构相，并直接由群体分布计算相间自由能差",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04138v1::deepseek-reasoner::150": {
+      "summary": "论文《Quantum oscillations and linear magnetoresistance in ultraclean CaVO$_3$ thin films》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04061v1::deepseek-reasoner::150": {
+      "summary": "论文《Fermi-Dirac thermal measurements: A framework for quantum hypothesis testing and semidefinite optimization》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04059v1::deepseek-reasoner::150": {
+      "summary": "这篇研究针对传统网络接触追踪模型的两个局限（需预设追踪快于传播、需假设全员配合治疗）展开，通过引入社会动力学中的“三重接触追踪”新机制（允许通过两个已触发",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04054v1::deepseek-reasoner::150": {
+      "summary": "论文《Mermin's dielectric function and the f-sum rule》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04048v1::deepseek-reasoner::150": {
+      "summary": "论文《Pushing-Induced Arrest Across Lattices and Dimensions》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03993v1::deepseek-reasoner::150": {
+      "summary": "本研究针对多头注意力中专业分工不明确的问题，提出了一个高维理论模型进行分析。核心发现表明，训练初期各注意力头处于非专门化状态，随后会分阶段与不同潜在信号方向对齐。研究比较了不同注意力函数",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03980v1::deepseek-reasoner::150": {
+      "summary": "论文《Dynamics of Charge-Density-Wave puddles in 2$H$-NbSe$_2$》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03949v1::deepseek-reasoner::150": {
+      "summary": "本文提出了一种描述对立谣言（如虚假新闻及其纠正信息）传播的SIS竞争模型",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03883v1::deepseek-reasoner::150": {
+      "summary": "量子电池在静态驱动下的研究已较广泛，但对其在多体系统中受周期驱动性能的认知仍显不足。本文揭示，多体结构从根本上决定了由周期性伊辛充电器驱动的集体自旋1/2量子电池的充电表现。相互作用范围、边界条件、系统尺寸及可积性（反映图连接性、几何结构、奇",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03866v1::deepseek-reasoner::150": {
+      "summary": "本文针对横纹肌细丝激活的协同机制展开研究。作者构建了一个一维伊辛模型，仅用钙离子浓度和肌球蛋白受力两个参数，来描述细丝激活及其与肌球蛋白力产生的耦合关系。模型",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03852v1::deepseek-reasoner::150": {
+      "summary": "论文《Dualities and Topological Classification of the $S=1$ Pyrochlore Spin Ice》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03826v1::deepseek-reasoner::150": {
+      "summary": "论文《O-Sensing: Operator Sensing for Interaction Geometry and Symmetries》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03773v1::deepseek-reasoner::150": {
+      "summary": "论文《Skyrmion generation via Laguerre-Gaussian beam irradiation in frustrated magnets》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03703v1::deepseek-reasoner::150": {
+      "summary": "论文《NMR evidence of spin supersolid and Pomeranchuk effect behaviors in the triangular-lattice antiferromagnet Rb$_2$Ni$_2$(SeO$_3$)$_3$》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03702v1::deepseek-reasoner::150": {
+      "summary": "论文《Contribution of remote bands to orbital magnetization in twisted bilayer graphene》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03694v1::deepseek-reasoner::150": {
+      "summary": "论文《X-ray magnetic circular dichroism evidence of intrinsic $d$-wave altermagnetism in rutile-structure NiF$_2$》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03656v1::deepseek-reasoner::150": {
+      "summary": "论文《Effect of magnetic drift on the stability structure of the ambipolar condition》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03641v1::deepseek-reasoner::150": {
+      "summary": "本研究针对人口增长背景下，大规模生态路径规划",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03635v1::deepseek-reasoner::150": {
+      "summary": "论文《Magnetic Signature of Chiral Phonons Revealed by Neutron Spectroscopy in Ferrimagnetic Fe$_{1.75}$Zn$_{0.25}$Mo$_3$O$_8$》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03634v1::deepseek-reasoner::150": {
+      "summary": "本文针对非平衡马尔可夫链的动态性质，提出一种基于图论的新研究框架。其核心方法是引入“循环矩阵”作为描述非平衡态矩阵空间的基，",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03620v1::deepseek-reasoner::150": {
+      "summary": "论文《Adding noise and scaling forces to speed up the Langevin clock》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04398v1::deepseek-reasoner::150": {
+      "summary": "针对混合连续变量与离散变量量子系统缺乏标准化评估工具的问题，本研究开发了首个仿真与基准测试框架HyQBench。该工具基于Bosonic Qiskit与QuTip构建，涵盖猫态与GKP态生成",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04377v1::deepseek-reasoner::150": {
+      "summary": "论文《Benchmarking Quantum Computers via Protocols, Comparing IBM's Heron vs IBM's Eagle》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04375v1::deepseek-reasoner::150": {
+      "summary": "论文《Non-Hermitian Quantum Mechanics with Applications to Gravity》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04373v1::deepseek-reasoner::150": {
+      "summary": "论文《Dynamical Behaviour of Density Correlations Across the Chaotic Phase for Interacting Bosons》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04357v1::deepseek-reasoner::150": {
+      "summary": "该研究聚焦于量子计算中泡利信道的错误阈值问题，旨在探究稳定子码的非加性特性以提升阈值下界。核心方法是采用陪集权重枚举",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04339v1::deepseek-reasoner::150": {
+      "summary": "论文《Quantum error mitigation by hierarchy-informed sampling: chiral dynamics in the Schwinger model》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04336v1::deepseek-reasoner::150": {
+      "summary": "该研究针对修正朗之万噪声形式主义中极化子算符与底层正则场算符关系不明确的问题，通过从宏观电磁正则量子化理论出发，精确导出了极化子算",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04332v1::deepseek-reasoner::150": {
+      "summary": "论文《On the operational and algebraic quantum correlations》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04310v1::deepseek-reasoner::150": {
+      "summary": "论文《Magic state distillation with permutation-invariant codes and a two-qubit example》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04250v1::deepseek-reasoner::150": {
+      "summary": "本研究探索了Yb+离子在4f¹³5d6s电子构型中长寿命亚稳态的存在。通过377.5 nm光泵浦制备亚稳态，并利用协同冷却的辅助离子精确测量衰变动力学。实验观测到寿命分别为0.92秒、约9",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04248v1::deepseek-reasoner::150": {
+      "summary": "论文《Progress on artificial flat band systems: classifying, perturbing, applying》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04234v1::deepseek-reasoner::150": {
+      "summary": "该研究针对量子纠错中色码的解码复杂度问题展开。之前表面码可通过图论中的最小权重匹配",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04210v1::deepseek-reasoner::150": {
+      "summary": "本研究提出了一种在光学晶格中实现超冷原子任意相干重排的方案，相当于对单粒子运动态执行任意幺正变换。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04192v1::deepseek-reasoner::150": {
+      "summary": "论文《OptiQKD: A Machine Learning-Optimized Framework for Real-Time Parameter Tuning in Quantum Key Distribution》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04187v1::deepseek-reasoner::150": {
+      "summary": "论文《Distributed optimization of Lindblad equations for large-scale cavity QED systems》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04156v1::deepseek-reasoner::150": {
+      "summary": "本文针对中性原子量子计算中占比超40%的原子损失错误，提出“",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04148v1::deepseek-reasoner::150": {
+      "summary": "论文《Non-local nonstabiliserness in Gluon and Graviton Scattering》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04126v1::deepseek-reasoner::150": {
+      "summary": "为突破单体量子计算机的物理扩展限制，分布式量子计算通过连接多个小型量子处理器构建量子网络。然而，远程量子处理器间的量子态与量子门传输带来了高昂的通信开销。现有静态图分区方法因忽略执行动态与网络拓扑而效能不足，而元启发式方法则计算耗时长。本研究提出一种基于束搜索的启发式算法，该时间感知算法",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04108v1::deepseek-reasoner::150": {
+      "summary": "论文《Entanglement between quantum dots transmitted via Majorana wire: Insights from the fermionic negativity, concurrence and quantum mutual information》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04097v1::deepseek-reasoner::150": {
+      "summary": "面对全球粮食与清洁能源需求的增长，农光系统成为优化土地利用的重要方案。然而，现有设计多将入射",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04089v1::deepseek-reasoner::150": {
+      "summary": "论文《The Steiner Tree Problem: Novel QUBO Formulation and Quantum Annealing Implementation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04082v1::deepseek-reasoner::150": {
+      "summary": "论文《Air-stable bright entangled photon-pair source from graphene-encapsulated van der Waals ferroelectric NbOI2》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04072v1::deepseek-reasoner::150": {
+      "summary": "论文《(Quantum) reference frames, relational observables, gauge reduction and physical interpretation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04066v1::deepseek-reasoner::150": {
+      "summary": "论文《Deterministic Quantum Jump (DQJ) Method for Weakly Dissipative Systems》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03998v1::deepseek-reasoner::150": {
+      "summary": "论文《Spectrally Corrected Polynomial Approximation for Quantum Singular Value Transformation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03979v1::deepseek-reasoner::150": {
+      "summary": "论文《Variance-Driven Mean Temperature Reduction in Nonuniformly Heated Radiative-Conductive Systems》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03950v1::deepseek-reasoner::150": {
+      "summary": "论文《Imaginary-time evolution of interacting spin systems in the truncated Wigner approximation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03925v1::deepseek-reasoner::150": {
+      "summary": "论文《Resource State Distillation via Stabilizer Channels》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03917v1::deepseek-reasoner::150": {
+      "summary": "论文《Collective purification of interacting quantum networks beyond symmetry constraints》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03888v1::deepseek-reasoner::150": {
+      "summary": "论文《Numerical evaluation of Casimir forces using the discontinuous Galerkin time-domain method》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03887v1::deepseek-reasoner::150": {
+      "summary": "论文《Kinematic budget of quantum correlations》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03854v1::deepseek-reasoner::150": {
+      "summary": "本文研究了开放量子系统中分数拓扑不变量的涌现问题。通过在受增益与损耗作用的周期SSH链中采用GKSL主方程，研究在满足整数拓扑不变量",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03853v1::deepseek-reasoner::150": {
+      "summary": "论文《Towards Practical Quantum Federated Learning: Enhancing Efficiency and Noise Tolerance》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03834v1::deepseek-reasoner::150": {
+      "summary": "本研究通过比较Born-Markov与全久期近似下GKSL主方程的局域与全局",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03803v1::deepseek-reasoner::150": {
+      "summary": "论文《Approximate Amplitude Encoding with the Adaptive Interpolating Quantum Transform》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03801v1::deepseek-reasoner::150": {
+      "summary": "论文《Variational Gibbs State Preparation on Trapped-Ion Devices》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03799v1::deepseek-reasoner::150": {
+      "summary": "论文《Enhancing Variational Quantum Eigensolvers for SU(2) Lattice Gauge Theory via Systematic State Preparation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03776v1::deepseek-reasoner::150": {
+      "summary": "本文针对容错量子计算中快速精确解码的关键需求，研究了如何在有限位宽下实现安全高效的最小权重完美匹配",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03697v1::deepseek-reasoner::150": {
+      "summary": "随着量子计算硬件快速发展，如何系统验证量子计算的正确性成为关键问题。本文提出将规范理论中严格成立的轴矢量反常现象作为晶格规范理论量子模拟的非平凡基准。研究团队在“Reimei”离子阱量子计算机上",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03645v1::deepseek-reasoner::150": {
+      "summary": "论文《Resource-Efficient Emulation of Majorana Zero Mode Braiding on a Superconducting Trijunction》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03642v1::deepseek-reasoner::150": {
+      "summary": "论文《Variational Quantum Transduction》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03639v1::deepseek-reasoner::150": {
+      "summary": "该研究针对量子比特规模扩展时多体量子串扰效应呈指数级增强的难题，提出一种张量网络鲁棒控制方法。核心是将张量网络模拟与",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04399v1::deepseek-reasoner::150": {
+      "summary": "该研究针对人体运动预测中轨迹与姿态预测任务分离、现有复合模型性能不足的问题，提出SimpliHuMoN——一种基于Transformer的简洁端到端模型。其核心方法采用堆叠的自注意力模块统一",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04395v1::deepseek-reasoner::150": {
+      "summary": "论文《Accurate and Efficient Hybrid-Ensemble Atmospheric Data Assimilation in Latent Space with Uncertainty Quantification》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04392v1::deepseek-reasoner::150": {
+      "summary": "论文《SELDON: Supernova Explosions Learned by Deep ODE Networks》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04390v1::deepseek-reasoner::150": {
+      "summary": "论文《A Dual-Helix Governance Approach Towards Reliable Agentic AI for WebGIS Development》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04385v1::deepseek-reasoner::150": {
+      "summary": "论文《ZipMap: Linear-Time Stateful 3D Reconstruction with Test-Time Training》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04383v1::deepseek-reasoner::150": {
+      "summary": "该研究针对YouTube网红经济中普遍存在的联盟营销透明度缺失问题，开发基于网络测量与自然语言处理的工具，对近54万创作者、跨度10年的200万视频进行分析。核心发现表明，尽管联盟营销链接广泛存在，但绝大多数视频未",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04378v1::deepseek-reasoner::150": {
+      "summary": "随着大语言模型向自主多智能体生态系统演进，鲁棒的极小极大训练至关重要，但高度非线性策略在内部最大化过程中引发的极端局部曲率易导致训练失稳。传统强制全局雅可比边界的方法过于保守，会抑制所有方向的敏感性并带来较大的鲁棒性代价。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04370v1::deepseek-reasoner::150": {
+      "summary": "论文《$τ$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04366v1::deepseek-reasoner::150": {
+      "summary": "针对可控音频生成方法通常需要模型重训练或计算成本高的推理时控制问题，本研究提出了一种低资源引导方案。通过分析现有引导方法的瓶颈，我们设计了在潜在空间直接操作的Lat",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04364v1::deepseek-reasoner::150": {
+      "summary": "本研究聚焦多模态网页代理（同时处理截图与可访问树）面临的新型跨模态攻击",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04360v1::deepseek-reasoner::150": {
+      "summary": "论文《Robust Unscented Kalman Filtering via Recurrent Meta-Adaptation of Sigma-Point Weights》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04359v1::deepseek-reasoner::150": {
+      "summary": "论文《Dissecting Quantization Error: A Concentration-Alignment Perspective》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04356v1::deepseek-reasoner::150": {
+      "summary": "针对通用机器人缺乏系统性评估基准的问题，本研究提出了大规模仿真框架RoboCasa365。该框架基于RoboCasa平台",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04355v1::deepseek-reasoner::150": {
+      "summary": "论文《Efficient Refusal Ablation in LLM through Optimal Transport》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04354v1::deepseek-reasoner::150": {
+      "summary": "论文《Out-of-distribution transfer of PDE foundation models to material dynamics under extreme loading》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04353v1::deepseek-reasoner::150": {
+      "summary": "该研究针对下一代网络中实时交互应用的严格时延与成本控制需求，提出一种基于约束",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04348v1::deepseek-reasoner::150": {
+      "summary": "论文《RANGER: Sparsely-Gated Mixture-of-Experts with Adaptive Retrieval Re-ranking for Pathology Report Generation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04343v1::deepseek-reasoner::150": {
+      "summary": "本研究针对画作作者归属识别中真实训练数据稀缺的",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04342v1::deepseek-reasoner::150": {
+      "summary": "本研究提出一套自动化框架，旨在为LIGO-Virgo-KAGRA（LVK）引力波超级事件搜寻光学对应体。研究利用ALeRCE中间件处理ZTF公开警报，通过空间查询、机器学习分类、宿主星系交叉",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04340v1::deepseek-reasoner::150": {
+      "summary": "论文《Balancing Fidelity, Utility, and Privacy in Synthetic Cardiac MRI Generation: A Comparative Study》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04334v1::deepseek-reasoner::150": {
+      "summary": "论文《SpotIt+: Verification-based Text-to-SQL Evaluation with Database Constraints》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04333v1::deepseek-reasoner::150": {
+      "summary": "论文《What Does Flow Matching Bring To TD Learning?》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04328v1::deepseek-reasoner::150": {
+      "summary": "论文《Algorithmic Compliance and Regulatory Loss in Digital Assets》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04325v1::deepseek-reasoner::150": {
+      "summary": "论文《Scalable Evaluation of the Realism of Synthetic Environmental Augmentations in Images》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04323v1::deepseek-reasoner::150": {
+      "summary": "该研究针对联邦学习中梯度共享导致隐私泄露与非独立同分布数据影响模型性能的双重挑战",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04321v1::deepseek-reasoner::150": {
+      "summary": "论文《SPRINT: Semi-supervised Prototypical Representation for Few-Shot Class-Incremental Tabular Learning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04317v1::deepseek-reasoner::150": {
+      "summary": "论文《World Properties without World Models: Recovering Spatial and Temporal Structure from Co-occurrence Statistics in Static Word Embeddings》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04314v1::deepseek-reasoner::150": {
+      "summary": "论文《MOO: A Multi-view Oriented Observations Dataset for Viewpoint Analysis in Cattle Re-Identification》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04312v1::deepseek-reasoner::150": {
+      "summary": "论文《Ordinal Lindahl Equilibrium for Voting》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04309v1::deepseek-reasoner::150": {
+      "summary": "论文《CRESTomics: Analyzing Carotid Plaques in the CREST-2 Trial with a New Additive Classification Model》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04308v1::deepseek-reasoner::150": {
+      "summary": "论文《Activation Outliers in Transformer Quantization: Reproduction, Statistical Analysis, and Deployment Tradeoffs》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04300v1::deepseek-reasoner::150": {
+      "summary": "通用基础模型通过跨实例可重用表征加速科学计算，但在受约束的科学系统中，预测需满足物理定律与安全限制，这对传统训练范式提出独特挑战。以电网",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04293v1::deepseek-reasoner::150": {
+      "summary": "针对音乐信息检索中缺乏能捕捉主观性的开源音频标注工具这一问题，本文推出LabelBuddy，一个开源协作式AI辅助标注工具。其核心方法在于将标注界面与AI推理后端解耦，通过容器化技术支持用户接入自定义模型进行预标注，并支持多用户共识。该系统有望推动音乐与音频研究从静态标签转向更丰富、对齐人类感知的表示学习。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04291v1::deepseek-reasoner::150": {
+      "summary": "论文《CubeComposer: Spatio-Temporal Autoregressive 4K 360° Video Generation from Perspective Video》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04289v1::deepseek-reasoner::150": {
+      "summary": "论文《IPD: Boosting Sequential Policy with Imaginary Planning Distillation in Offline Reinforcement Learning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04288v1::deepseek-reasoner::150": {
+      "summary": "论文《A multi-center analysis of deep learning methods for video polyp detection and segmentation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04277v1::deepseek-reasoner::150": {
+      "summary": "论文《VANGUARD: Vehicle-Anchored Ground Sample Distance Estimation for UAVs in GPS-Denied Environments》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04276v1::deepseek-reasoner::150": {
+      "summary": "该研究旨在探索如何从蕴含海量知识的大语言模型（LLMs）中系统提取其内在的因果假设。作者提出一套流程：首先引导LLM生成特定主题的文本，从中抽取事件并归纳为标准事件集，继而将每篇文档表示为事件出现",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04275v1::deepseek-reasoner::150": {
+      "summary": "本研究提出了一种评分分解的统计推断框架，旨在将预测评估的评分函数分解为校准度、区分度与不确定性三个可解释部分。核心方法基于预测的线性再校准，适用于包括均值与分位数在内的",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04259v1::deepseek-reasoner::150": {
+      "summary": "论文《When AI Fails, What Works? A Data-Driven Taxonomy of Real-World AI Risk Mitigation Strategies》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04257v1::deepseek-reasoner::150": {
+      "summary": "针对长周期任务中大型语言模型因有限上下文窗口导致的性能瓶颈问题，本研究提出Memex机制，通过建立索引化经验记忆来压缩上下文而不丢失原始交互信息。该系统将完整高保真交互存储在外部数据库中，并在工作上下文中仅保留简洁的结构化摘要与稳定索引，使智能体能够按需精准检索过往证据。结合强化学习框架MemexRL对读写行为进行优化，智能体可自主学习摘要归档",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04255v1::deepseek-reasoner::150": {
+      "summary": "论文《Learning Read-Once Determinants and the Principal Minor Assignment Problem》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04247v1::deepseek-reasoner::150": {
+      "summary": "论文《Online Learning for Multi-Layer Hierarchical Inference under Partial and Policy-Dependent Feedback》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04245v1::deepseek-reasoner::150": {
+      "summary": "论文《LikeThis! Empowering App Users to Submit UI Improvement Suggestions Instead of Complaints》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04244v1::deepseek-reasoner::150": {
+      "summary": "论文《FeedAIde: Guiding App Users to Submit Rich Feedback Reports by Asking Context-Aware Follow-Up Questions》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04241v1::deepseek-reasoner::150": {
+      "summary": "论文《Agentics 2.0: Logical Transduction Algebra for Agentic Data Workflows》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04228v1::deepseek-reasoner::150": {
+      "summary": "本研究指出，短程机器学习势函数因忽略长程静电相互作用，在模拟水等极性溶剂界面",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04224v1::deepseek-reasoner::150": {
+      "summary": "本研究针对数据中敏感变量的依赖抑制问题，提出了一种基于编码器的方法，旨在学习与敏感变量无关但仍保持数据关键特性的表示。不同于依赖去相关或对抗学习的现有技术，该方法通过显式估计并修改数据分布以消除统计依赖。为实现这一",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04223v1::deepseek-reasoner::150": {
+      "summary": "论文《Semi-Supervised Generative Learning via Latent Space Distribution Matching》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04222v1::deepseek-reasoner::150": {
+      "summary": "论文《PRAM-R: A Perception-Reasoning-Action-Memory Framework with LLM-Guided Modality Routing for Adaptive Autonomous Driving》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04219v1::deepseek-reasoner::150": {
+      "summary": "本研究针对低资源个性化语音合成中，直接使用大量零样本TTS合成语音进行数据增强会导致说话人相似度下降的问题，提出了ZeSTA框架。该方法核心在于引入轻量",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04209v1::deepseek-reasoner::150": {
+      "summary": "图神经网络在分子生物学、社交网络等领域应用日益广泛，但其内部机制不透明影响了模型的可解释性与可信度。本文提出XPlore技术，通过梯度引导对邻接矩阵和节点特征进行联合扰动，突破了以往反事实解释方法仅",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04204v1::deepseek-reasoner::150": {
+      "summary": "论文《Beyond Mixtures and Products for Ensemble Aggregation: A Likelihood Perspective on Generalized Means》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04199v1::deepseek-reasoner::150": {
+      "summary": "论文《Bayesian Adversarial Privacy》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04198v1::deepseek-reasoner::150": {
+      "summary": "稀疏自编码器（SAE）常用于从神经网络激活中提取可",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04194v1::deepseek-reasoner::150": {
+      "summary": "论文《Noise-aware Client Selection for carbon-efficient Federated Learning via Gradient Norm Thresholding》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04191v1::deepseek-reasoner::150": {
+      "summary": "针对个性化大语言模型助手在长程交互中遵循用户偏好的能力评估不足，本研究提出了RealPref基准。该基准包含丰富的用户画像、多样化偏好及",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04186v1::deepseek-reasoner::150": {
+      "summary": "日志数据对入侵检测与取证分析至关重要，但人工分析因数据量大、事件格式异构及消息非结构化而极为繁琐。现有",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04181v1::deepseek-reasoner::150": {
+      "summary": "论文《REDNET-ML: A Multi-Sensor Machine Learning Pipeline for Harmful Algal Bloom Risk Detection Along the Omani Coast》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04180v1::deepseek-reasoner::150": {
+      "summary": "论文《Architectural Proprioception in State Space Models: Thermodynamic Training Induces Anticipatory Halt Detection》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04177v1::deepseek-reasoner::150": {
+      "summary": "论文《CodeTaste: Can LLMs Generate Human-Level Code Refactorings?》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04166v1::deepseek-reasoner::150": {
+      "summary": "论文《Learning Hip Exoskeleton Control Policy via Predictive Neuromusculoskeletal Simulation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04165v1::deepseek-reasoner::150": {
+      "summary": "该研究针对预训练2D基础模型难以直接处理3D体数据的问题，提出了一种无需",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04162v1::deepseek-reasoner::150": {
+      "summary": "论文《Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04158v1::deepseek-reasoner::150": {
+      "summary": "论文《GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04152v1::deepseek-reasoner::150": {
+      "summary": "本研究针对Ti_n+1C_n MXenes材料在离子辐照下的动态响应问题，开发了一种高精度且高效的机器学习原子间势",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04147v1::deepseek-reasoner::150": {
+      "summary": "针对难熔合金原子模拟中传统势函数元素覆盖有限、精度不足或计算",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04146v1::deepseek-reasoner::150": {
+      "summary": "论文《LISTA-Transformer Model Based on Sparse Coding and Attention Mechanism and Its Application in Fault Diagnosis》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04142v1::deepseek-reasoner::150": {
+      "summary": "在急救医疗中，连续生理监测至关重要，但可信赖人工智能的部署仍面临挑战。本研究提出Vivaldi，一种基于角色结构的多智能体框架，用于解读多元生理时间序列。通过针对急诊专家开展的临床试点评估发现，智能体系统并非普遍提升性能：对非思考型及医学微调模型",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04135v1::deepseek-reasoner::150": {
+      "summary": "GRPO方法虽能有效扩展大语言模型的推理能力，但其依赖大量组采样的机制导致计算成本",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04134v1::deepseek-reasoner::150": {
+      "summary": "论文《InstMeter: An Instruction-Level Method to Predict Energy and Latency of DL Model Inference on MCUs》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04133v1::deepseek-reasoner::150": {
+      "summary": "论文《Exploiting Subgradient Sparsity in Max-Plus Neural Networks》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04132v1::deepseek-reasoner::150": {
+      "summary": "论文《Two-Stage Photovoltaic Forecasting: Separating Weather Prediction from Plant-Characteristics》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04128v1::deepseek-reasoner::150": {
+      "summary": "该研究针对音频-视觉大语言模型在多任务统一训练时普遍存在的任务间“负迁移”问题（约55%任务性能",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04127v1::deepseek-reasoner::150": {
+      "summary": "论文《Data-Aware Random Feature Kernel for Transformers》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04124v1::deepseek-reasoner::150": {
+      "summary": "论文《BeamPERL: Parameter-Efficient RL with Verifiable Rewards Specializes Compact LLMs for Structured Beam Mechanics Reasoning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04122v1::deepseek-reasoner::150": {
+      "summary": "论文《FastWave: Optimized Diffusion Model for Audio Super-Resolution》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04117v1::deepseek-reasoner::150": {
+      "summary": "该研究针对深度学习优化中学习率调度策略的局限性，提出了一种自适应重启方法SGD",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04113v1::deepseek-reasoner::150": {
+      "summary": "论文《Understanding Sources of Demographic Predictability in Brain MRI via Disentangling Anatomy and Contrast》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04109v1::deepseek-reasoner::150": {
+      "summary": "论文《Testing Full Mediation of Treatment Effects and the Identifiability of Causal Mechanisms》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04103v1::deepseek-reasoner::150": {
+      "summary": "论文《Machine learning assisted High-Throughput study of M$_4$X$_3$T$_x$ MXenes》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04099v1::deepseek-reasoner::150": {
+      "summary": "论文《Efficient Point Cloud Processing with High-Dimensional Positional Encoding and Non-Local MLPs》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04093v1::deepseek-reasoner::150": {
+      "summary": "本文针对基于测量反馈架构的伊辛机存在超参数",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04092v1::deepseek-reasoner::150": {
+      "summary": "本研究针对机器学习力场（MLFF）在GPU硬件上运行效率低下的问题，采用",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04084v1::deepseek-reasoner::150": {
+      "summary": "针对未来对撞机实验对粒子重建精度提出的极限要求，以及现有算法严重依赖探测器特定设计的局限性，本文提出一种端到端的全局事件重建方法。该方法通过几何代数变换网络与对象凝聚聚类技术，直接从径迹与量能器信号中重建",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04081v1::deepseek-reasoner::150": {
+      "summary": "本研究针对细胞级病理图像分析中图像块极小（40×40像素）的",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04071v1::deepseek-reasoner::150": {
+      "summary": "论文《SaFeR: Safety-Critical Scenario Generation for Autonomous Driving Test via Feasibility-Constrained Token Resampling》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04069v1::deepseek-reasoner::150": {
+      "summary": "针对微调后大语言模型中难以从最终输出察觉的奖励攻击行为，本研究提出一种基于内部激活信号的实时监测方法。通过在大模型生成文本时，对其残差流激活值训练稀疏自编码器并应用轻量级线性分类器，实现词级别的奖励攻击检测。实验发现，",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04064v1::deepseek-reasoner::150": {
+      "summary": "本研究针对多编码器扩散模型（以Stable Diffusion 3为例）的后门攻击安全问题，探究在模型参数大幅增加的情况下，能否实现高效、隐蔽的攻击。作者提出MELT方法，通过仅训练低秩适配器并冻结预训练编码器，实现轻量级攻击",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04062v1::deepseek-reasoner::150": {
+      "summary": "论文《FedCova: Robust Federated Covariance Learning Against Noisy Labels》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04057v1::deepseek-reasoner::150": {
+      "summary": "论文《Sim2Sea: Sim-to-Real Policy Transfer for Maritime Vessel Navigation in Congested Waters》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04045v1::deepseek-reasoner::150": {
+      "summary": "该研究关注蛋白质语言模型在针对特定生物分类群进行领域微调后，可能无意中生成有毒蛋白质的安全风险。为解决此问题，作者将Logit Diff Ampl",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04040v1::deepseek-reasoner::150": {
+      "summary": "论文《Morphologies for DECaLS Galaxies through a combination of non-parametric indices and machine learning methods: A comprehensive catalog using the Galaxy Morphology Extractor (galmex) code》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04037v1::deepseek-reasoner::150": {
+      "summary": "该研究针对组合图像检索中因传统对比学习框架导致的语义混淆与相关性抑制问题，提出DQE-CIR方法。其核心创新包括：通过可学习属性权重增强文本引导下的视觉特征对齐",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04035v1::deepseek-reasoner::150": {
+      "summary": "论文《mlx-vis: GPU-Accelerated Dimensionality Reduction and Visualization on Apple Silicon》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04034v1::deepseek-reasoner::150": {
+      "summary": "这篇论文批判了四十年来AI教育研究固守的\"静态学习假设\"，指出当前系统多将AI定位为信息传递工具，而非野外非结构化实地探究中的认知伙伴。为此，研究者提出Field Atlas框架，",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04032v1::deepseek-reasoner::150": {
+      "summary": "论文《Multi-Stage Music Source Restoration with BandSplit-RoFormer Separation and HiFi++ GAN》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04029v1::deepseek-reasoner::150": {
+      "summary": "针对离线训练机器人控制器难以适应运行中新变化的问题，本研究提出一种在线持续强化学习框架，使机器人在部署中能自主适应。该方法以DreamerV3为基础，利用世界模型预测残差检测分布外事件并自动触发微调，同时结合任务表现",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04028v1::deepseek-reasoner::150": {
+      "summary": "本文研究去中心化大语言模型推理网络中输出质量的轻量化评估问题。针对现有质量证明机制依赖单一质量信号的不足，作者提出一个多维质量评分框架，将输出质量分解为模型先验、结构质量、语义一致性",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04024v1::deepseek-reasoner::150": {
+      "summary": "论文《Volumetric Directional Diffusion: Anchoring Uncertainty Quantification in Anatomical Consensus for Ambiguous Medical Image Segmentation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04019v1::deepseek-reasoner::150": {
+      "summary": "论文《Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04007v1::deepseek-reasoner::150": {
+      "summary": "本文研究了分组赌博机中固定预算约束下的最优臂识别问题，其中每个臂包含多个具有随机奖励的独立属性。仅当所有属性均值均超过给定阈值时，臂才被视为可行，目标在于寻找具有最大整体均值的可行臂。研究首先推导了该设定下任何算法的误差概率下界，进而提出一种新颖算法——可行性约束逐次拒绝法（FCSR），该算法能在保证可行性的同时识别最优臂。理论证明其误差概率对问题参数的依赖在指数阶达到最优常数因子",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04005v1::deepseek-reasoner::150": {
+      "summary": "率失真感知权衡从比特率、重构保真度与感知质量三个维度界定了有损压缩的理论极限。现有神经压缩方法虽能提升感知质量，但往往固定于权衡曲面某一点，调整权衡需重新训练。本研究提出无需训练的框架，利用预训练扩散模型遍历完整的率失真感知曲面：通过反向信道编码模块与创新的分数缩放概率流常微分方程解码器相结合，理论上证明该扩散解码器",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04002v1::deepseek-reasoner::150": {
+      "summary": "推理分割领域正日益采用强化学习生成解释性推理链来指导多模态大语言模型。现有几何奖励机制仅能指导最终定位，却无法判断推理过程是否始终锚定目标区域或偏离至无关背景。缺乏这种区分性引导，模型推理常变得冗长散漫，难以在复杂场景中辨识目标。为此，我们",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04001v1::deepseek-reasoner::150": {
+      "summary": "论文《STEM Faculty Perspectives on Generative AI in Higher Education》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.04000v1::deepseek-reasoner::150": {
+      "summary": "本文研究了离线模型优化（MBO）的“可学习性”问题，挑战了传统依赖回归预测精度的范式。作者指出其本质是优化而非预测，核心在于对近优与次优设计进行正确排序",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03995v1::deepseek-reasoner::150": {
+      "summary": "论文《Spectral Surgery: Training-Free Refinement of LoRA via Gradient-Guided Singular Value Reweighting》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03992v1::deepseek-reasoner::150": {
+      "summary": "本研究关注人工智能研发自动化（AIRDA）的潜在影响及其不确定性。现有数据难以反映实际自动化程度及其广泛效应，例如AIRDA是否更易加速能力提升而非安全进展，或人类监管能否跟上其发展速度。为此，本文提出一套衡量指标，覆盖研发资本投入占比、研究人员时间分配及AI",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03991v1::deepseek-reasoner::150": {
+      "summary": "论文《Weakly Supervised Patch Annotation for Improved Screening of Diabetic Retinopathy》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03989v1::deepseek-reasoner::150": {
+      "summary": "论文《When Visual Evidence is Ambiguous: Pareidolia as a Diagnostic Probe for Vision Models》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03983v1::deepseek-reasoner::150": {
+      "summary": "论文《GeoSeg: Training-Free Reasoning-Driven Segmentation in Remote Sensing Imagery》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03981v1::deepseek-reasoner::150": {
+      "summary": "针对人工智能设计电磁超表面时面临的高资源消耗与自动化难题，本研究提出一种基于",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03977v1::deepseek-reasoner::150": {
+      "summary": "论文《Right in Time: Reactive Reasoning in Regulated Traffic Spaces》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03975v1::deepseek-reasoner::150": {
+      "summary": "论文《Phi-4-reasoning-vision-15B Technical Report》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03973v1::deepseek-reasoner::150": {
+      "summary": "本文针对扩散模型采样时函数评估次数（NFE）过高导致计算成本大的问题，提出Dual-Solver方法。其核心是设计可学习参数，实现对预测类型、积分域及残差项的连续自适应调整，在保持二阶局部精度的同时优化采样行为",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03971v1::deepseek-reasoner::150": {
+      "summary": "论文《Upholding Epistemic Agency: A Brouwerian Assertibility Constraint for Responsible AI》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03970v1::deepseek-reasoner::150": {
+      "summary": "本研究探讨生成式人工智能在模糊商业情境中提供战略建议的可靠性问题。通过构建四维商业模糊分类体系，结合人机协同实验，并采用“LLM即",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03964v1::deepseek-reasoner::150": {
+      "summary": "本研究旨在解决从任意角色概念生成精准《我的世界》像素皮肤的问题。提出了开源两阶段框架BLOCK：",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03963v1::deepseek-reasoner::150": {
+      "summary": "本研究针对动态链路预测任务中，现有Transformer方法难以捕捉复杂多尺度时序动态的问题，提出TFWaveFormer模型。其核心创新",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03961v1::deepseek-reasoner::150": {
+      "summary": "ProFound是一种专用于前列腺多参数磁共振成像的中等规模视觉基础模型，通过多种自监督方法在包含5000名患者的多机构数据集上进行预",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03959v1::deepseek-reasoner::150": {
+      "summary": "论文《LoRA-MME: Multi-Model Ensemble of LoRA-Tuned Encoders for Code Comment Classification》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03956v1::deepseek-reasoner::150": {
+      "summary": "该研究针对单应性估计模型在跨模态场景下泛化能力不足的问题，提出了一种新颖",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03955v1::deepseek-reasoner::150": {
+      "summary": "本研究针对强化学习微调过程中数据效率低、交互数据稀缺易过时的问题，提出了高斯重要性采样策略优化方法（GIPO）。该方法基于截断重要性采样，创新性地用基于对数比的高斯信任权重替代硬",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03954v1::deepseek-reasoner::150": {
+      "summary": "本文针对空气质量指数等多季节性分类时间序列预测问题，提出一种基于傅里叶级数与指示函数的建模框架。受TBATS方法启发，该模型能够有效捕捉",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03953v1::deepseek-reasoner::150": {
+      "summary": "论文《RVN-Bench: A Benchmark for Reactive Visual Navigation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03946v1::deepseek-reasoner::150": {
+      "summary": "尽管生成模型在加速材料发现方面前景广阔，但其单一阶段的生成过程往往缺乏灵活性，难以兼顾结构的合理性与多样性。为此，我们提出名为Lang2Str的两阶段生成框架，融合大语言模型与流模型的优势，以实现灵活、精准的材料生成。首先，大语言模型基于其广泛知识生成材料晶胞的几何布局与性质描述，作为高层条件；随后，条件流模型将这些文本描述解码为精确的连续坐标与晶胞参数。实验",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03945v1::deepseek-reasoner::150": {
+      "summary": "论文《How Predicted Links Influence Network Evolution: Disentangling Choice and Algorithmic Feedback in Dynamic Graphs》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03941v1::deepseek-reasoner::150": {
+      "summary": "论文《Slice-wise quality assessment of high b-value breast DWI via deep learning-based artifact detection》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03939v1::deepseek-reasoner::150": {
+      "summary": "该论文针对现有工业异常检测方法在多模态融合中的局限性，提出了**CMDR-IAD**框架。其核心方法结合了双向跨模态映射（学习2D与3D模态间的一致性）",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03932v1::deepseek-reasoner::150": {
+      "summary": "论文《Selecting Offline Reinforcement Learning Algorithms for Stochastic Network Control》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03922v1::deepseek-reasoner::150": {
+      "summary": "论文《Hierarchical Inference and Closure Learning via Adaptive Surrogates for ODEs and PDEs》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03920v1::deepseek-reasoner::150": {
+      "summary": "该研究针对模型融合在测试时分布偏移下可靠性不足的问题，提出BD-Merging框架。其核心方法结合证据学习建模跨任务不确定性，设计邻接差异评分量化样本间证据对齐，并基于",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03915v1::deepseek-reasoner::150": {
+      "summary": "本文针对当前基于知名虚构角色评估角色扮演智能体的方法存在记忆依赖偏差的问题，提出匿名评估方案，通过多基准实验证实角色名称的暴露确实隐含信息，匿名化会显著降低模型表现。进一步研究匿名环境下通过性格增强提升角色一致性的方法，系统对比了人工标注与模型自生成性格特质的效果，发现引入性格信息均能改善智能体表现，且自生成性格可达到与人工标注相当的效果。这项工作建立了更公平的评估协议，并验证了一种可扩展的性格增强框架，有助于构建更鲁棒的角色扮演智能体。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03911v1::deepseek-reasoner::150": {
+      "summary": "论文《From Threat Intelligence to Firewall Rules: Semantic Relations in Hybrid AI Agent and Expert System Architectures》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03903v1::deepseek-reasoner::150": {
+      "summary": "论文《From Misclassifications to Outliers: Joint Reliability Assessment in Classification》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03902v1::deepseek-reasoner::150": {
+      "summary": "本研究针对当前高精度时间序列预测模型因结构复杂而缺乏可解释性的问题，提出了一种新颖的基于片段分解的可解释预测方法PatchDecomp。其核心方法是将输入序列划分为",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03897v1::deepseek-reasoner::150": {
+      "summary": "论文《IROSA: Interactive Robot Skill Adaptation using Natural Language》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03892v1::deepseek-reasoner::150": {
+      "summary": "本研究针对楔形文字泥板元数据自动分类的难题",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03884v1::deepseek-reasoner::150": {
+      "summary": "论文《CzechTopic: A Benchmark for Zero-Shot Topic Localization in Historical Czech Documents》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03881v1::deepseek-reasoner::150": {
+      "summary": "本研究探讨LLM驱动代理能否可靠识别网站交互设计中的暗模式（即操纵性设计）。研究以实施CCPA数据权利请求的网站门户为场景，设计了一种能端到端遍历请求流程、收集证据并分类暗模式的审计代理。在456个数据经纪网站上测试发现，该代理",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03880v1::deepseek-reasoner::150": {
+      "summary": "论文《Joint Hardware-Workload Co-Optimization for In-Memory Computing Accelerators》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03872v1::deepseek-reasoner::150": {
+      "summary": "大型推理模型借助测试时扩展技术展现出优异性能，该方法通过生成多个候选答案并选取最可靠结果来提升预测准确率。现有研究虽指出置信度等内部信号能部分反映答案正确性，且与准确率存在分布关联，但尚未充分利用分布信息指导答案选择。为此，我们提出DistriVoting方法",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03867v1::deepseek-reasoner::150": {
+      "summary": "论文《k-hop Fairness: Addressing Disparities in Graph Link Prediction Beyond First-Order Neighborhoods》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03865v1::deepseek-reasoner::150": {
+      "summary": "论文《Structure-Aware Distributed Backdoor Attacks in Federated Learning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03843v1::deepseek-reasoner::150": {
+      "summary": "该研究针对非平稳随机线性赌博机中奖励模型时变的问题，提出利用历史数据学习奖励模型中的不变特征以提升学习效率。核心方法是假设奖励可",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03838v1::deepseek-reasoner::150": {
+      "summary": "论文《Climate Downscaling with Stochastic Interpolants (CDSI)》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03837v1::deepseek-reasoner::150": {
+      "summary": "论文《Harnessing Selective State Space Models to Enhance Semianalytical Design of Fabrication-Ready Multilayered Huygens' Metasurfaces: Part I - Field-based Semianalytical Synthesis》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03832v1::deepseek-reasoner::150": {
+      "summary": "论文《Non-Invasive Reconstruction of Cardiac Activation Dynamics Using Physics-Informed Neural Networks》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03830v1::deepseek-reasoner::150": {
+      "summary": "论文《Large-Margin Hyperdimensional Computing: A Learning-Theoretical Perspective》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03825v1::deepseek-reasoner::150": {
+      "summary": "该研究聚焦多模态大推理模型（MLRMs）中冷启动初始化机制不明确的问题。通过提出视觉注意力分数（VAS）这一量化指标，论文揭示了模型性能与视觉注意力高度相关，并发现多模态冷启动反而导致“懒惰注意力定位”，即模型未能",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03824v1::deepseek-reasoner::150": {
+      "summary": "该研究探讨语言模型是否会因环境提示而发展出“评估意识”，从而策略性地表现不佳以规避潜在干预。作者构建黑盒对抗优化框架，将上下文",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03823v1::deepseek-reasoner::150": {
+      "summary": "论文《SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03820v1::deepseek-reasoner::150": {
+      "summary": "交互式推荐系统日益采用强化学习以捕捉用户与系统交互的时序动态，但现有公平性方法常忽视观测",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03819v1::deepseek-reasoner::150": {
+      "summary": "本文针对回归断点设计中处理效应存在异质性的问题，提出了一种基于贝叶斯加性回归树的直接贝叶斯非参数估计方法。其核心在于通过损失函数构建伪模型，",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03818v1::deepseek-reasoner::150": {
+      "summary": "论文《Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03810v1::deepseek-reasoner::150": {
+      "summary": "论文《A Bi-Stage Framework for Automatic Development of Pixel-Based Planar Antenna Structures》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03808v1::deepseek-reasoner::150": {
+      "summary": "本文研究发现数据集蒸馏中软标签存储开销巨大，尤其在大规模数据集上。为压缩存储成本，提出基于向量量化自编码器（VQAE）的软标签压缩方法，在保持蒸馏性能的同时显著降低比特需求。实验显示，在ImageNet-1K上该方法",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03806v1::deepseek-reasoner::150": {
+      "summary": "状态空间模型Mamba近期在计算机视觉领域展现出巨大潜力，其高效处理长序列任务的能力备受关注。然而现有自回归预训练方法受限于短序列，未能充分发挥Mamba的优势。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03805v1::deepseek-reasoner::150": {
+      "summary": "论文《Relational In-Context Learning via Synthetic Pre-training with Structural Prior》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03804v1::deepseek-reasoner::150": {
+      "summary": "论文《Zero-Knowledge Proof (ZKP) Authentication for Offline CBDC Payment System Using IoT Devices》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03802v1::deepseek-reasoner::150": {
+      "summary": "论文《Unsupervised Surrogate-Assisted Synthesis of Free-Form Planar Antenna Topologies for IoT Applications》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03800v1::deepseek-reasoner::150": {
+      "summary": "论文《A Rubric-Supervised Critic from Sparse Real-World Outcomes》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03796v1::deepseek-reasoner::150": {
+      "summary": "该研究针对持续测试时自适应长期应用中，模型因误差积累导致预测坍缩（仅输出少数类别）的问题，指出已有周期性重置策略存在重置时机僵化和完全重置导致有效知识丢失的缺陷。为此，作者提出自适应选择性重置",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03792v1::deepseek-reasoner::150": {
+      "summary": "论文《TAP: A Token-Adaptive Predictor Framework for Training-Free Diffusion Acceleration》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03790v1::deepseek-reasoner::150": {
+      "summary": "论文《T2S-Bench & Structure-of-Thought: Benchmarking and Prompting Comprehensive Text-to-Structure Reasoning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03785v1::deepseek-reasoner::150": {
+      "summary": "本研究针对随机对照试验（RCT）成本高昂而观察性数据未被有效利用于前瞻性实验设计的问题，提出“主动残差学习”新范式与R-Design",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03784v1::deepseek-reasoner::150": {
+      "summary": "论文《Specification-Driven Generation and Evaluation of Discrete-Event World Models via the DEVS Formalism》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03782v1::deepseek-reasoner::150": {
+      "summary": "本文针对共享账户中多用户行为混杂导致的推荐不准问题，提出DisenReason模型。现有方法常假定账户内用户数固定，难以适应多样共享模式。为此，该方法创新采用两阶段推理：首先从频域角度解耦行为，构建统一账户行为表征；进而以此为中心推断账户背后的潜在用户数量，实现动态用户识别。在四个基准数据集上",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03781v1::deepseek-reasoner::150": {
+      "summary": "本文针对现有AI记忆基准仅关注对话中明确呈现的",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03780v1::deepseek-reasoner::150": {
+      "summary": "论文《MACC: Multi-Agent Collaborative Competition for Scientific Exploration》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03778v1::deepseek-reasoner::150": {
+      "summary": "论文《Inverse Contextual Bandits without Rewards: Learning from a Non-Stationary Learner via Suffix Imitation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03777v1::deepseek-reasoner::150": {
+      "summary": "论文《LEA: Label Enumeration Attack in Vertical Federated Learning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03772v1::deepseek-reasoner::150": {
+      "summary": "论文《Towards Effective Orchestration of AI x DB Workloads》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03770v1::deepseek-reasoner::150": {
+      "summary": "论文《Not All Candidates are Created Equal: A Heterogeneity-Aware Approach to Pre-ranking in Recommender Systems》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03769v1::deepseek-reasoner::150": {
+      "summary": "论文《IntroductionDMD-augmented Unpaired Neural Schrödinger Bridge for Ultra-Low Field MRI Enhancement》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03768v1::deepseek-reasoner::150": {
+      "summary": "论文《Cognition to Control - Multi-Agent Learning for Human-Humanoid Collaborative Transport》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03761v1::deepseek-reasoner::150": {
+      "summary": "论文《AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03760v1::deepseek-reasoner::150": {
+      "summary": "针对时间序列预测中大规模数据带来的计算存储挑战，本研究提出谐波数据集蒸馏方法HDT。该方法通过快速傅里叶变换将时间序列分解为频域正弦基，并利用谐波匹配对齐其核心周期",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03759v1::deepseek-reasoner::150": {
+      "summary": "论文《Learning Approximate Nash Equilibria in Cooperative Multi-Agent Reinforcement Learning via Mean-Field Subsampling》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03756v1::deepseek-reasoner::150": {
+      "summary": "本文针对大语言模型在科学发现中直接建模生成推理过程P(h|b)存在的组合爆炸（O(N^k)）难题，提出了MOOSE-Star统一训练框架。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03753v1::deepseek-reasoner::150": {
+      "summary": "本文研究AI代理从云端转向边缘设备后，如何安全高效地在点对点网络中协作。传统P2P交换静态",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03752v1::deepseek-reasoner::150": {
+      "summary": "这篇论文研究如何平衡大语言模型（LLM）的高精度与小语言模型（SLM）的低成本，提出协作推理系统COREA。其核心方法是先",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03751v1::deepseek-reasoner::150": {
+      "summary": "论文《Interaction-Aware Whole-Body Control for Compliant Object Transport》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03748v1::deepseek-reasoner::150": {
+      "summary": "本文针对高风险合成数据生成中保真度、约束控制、可靠性评估与计算效率难以兼顾的四难问题，提出了JANUS框架。其核心",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03745v1::deepseek-reasoner::150": {
+      "summary": "该研究针对多目标视觉语言导航任务中，传统检索增强方法因缺乏显式空间建模而导致的空间幻觉与规划漂移问题，提出了RAGNav框架。其",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03741v1::deepseek-reasoner::150": {
+      "summary": "论文《HALyPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03739v1::deepseek-reasoner::150": {
+      "summary": "论文《PROSPECT: Unified Streaming Vision-Language Navigation via Semantic--Spatial Fusion and Latent Predictive Representation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03734v1::deepseek-reasoner::150": {
+      "summary": "本研究针对恒星光谱异常检测问题，提出一种基于自编码器的机器学习框架。该方法训练神经网络学习光谱数据的低维表示与重构，以重构误差作为异常分数",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03727v1::deepseek-reasoner::150": {
+      "summary": "论文《Understanding Parents' Desires in Moderating Children's Interactions with GenAI Chatbots through LLM-Generated Probes》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03725v1::deepseek-reasoner::150": {
+      "summary": "论文《Why Do Unlearnable Examples Work: A Novel Perspective of Mutual Information》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03723v1::deepseek-reasoner::150": {
+      "summary": "该研究针对基于阻变交叉阵列的内存计算系统中模拟信号处理面临的混合噪声（微小扰动与异常值）问题。现有模拟纠错",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03714v1::deepseek-reasoner::150": {
+      "summary": "论文《Order Is Not Layout: Order-to-Space Bias in Image Generation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03711v1::deepseek-reasoner::150": {
+      "summary": "该研究解决了本地差分隐私（LDP）直接应用于高维图像时导致数据效用严重下降的问题。作者提出LDP-Slicing框架，其核心方法是将像素",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03710v1::deepseek-reasoner::150": {
+      "summary": "本文针对零样本MRI重建中单一模态生成先验在严重欠采样下易产生伪影的问题，提出MPFlow多模态重建框架。该方法基于校正流模型，引入辅助MRI模态信息，并通过新颖的PAMRI自监督预训练策略学习跨模态共享表征",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03704v1::deepseek-reasoner::150": {
+      "summary": "论文《Large-Language-Model-Guided State Estimation for Partially Observable Task and Motion Planning》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03701v1::deepseek-reasoner::150": {
+      "summary": "论文《UrbanHuRo: A Two-Layer Human-Robot Collaboration Framework for the Joint Optimization of Heterogeneous Urban Services》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03700v1::deepseek-reasoner::150": {
+      "summary": "论文《Generalization Properties of Score-matching Diffusion Models for Intrinsically Low-dimensional Data》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03692v1::deepseek-reasoner::150": {
+      "summary": "该研究针对扩散模型采样中，在刚性区域因局部截断误差导致样本质量下降的问题。作者提出将求解器产生的误差作为引导信号，设计嵌入龙格-库塔引导方法，利用检测到的刚性来减少误差、稳定采样。理论",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03686v1::deepseek-reasoner::150": {
+      "summary": "针对化学配方自动化设计中高维组合空间探索与物理约束满足的难题，本研究提出了AI4S-SDS神经符号溶剂",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03684v1::deepseek-reasoner::150": {
+      "summary": "这篇论文探讨人工智能如何改变数学研究范式，指出AI已能证明研究级数学定理。作者呼吁数学家积极学习并适应这项技术，认真思考其将对数学实践带来的全面冲击。研究强调学术界需共同应对AI带来的挑战与机遇，以引导该技术为",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03683v1::deepseek-reasoner::150": {
+      "summary": "现有代码生成基准主要针对顺序代码，难以有效评估大语言模型生成并发代码的能力。并发代码复杂度更高，存在死锁、数据竞争等特有缺陷。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03681v1::deepseek-reasoner::150": {
+      "summary": "多模态大语言模型在视觉语言任务中表现优异，但面临高分辨率图像和视频等复杂场景下视觉令牌数量指数",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03680v1::deepseek-reasoner::150": {
+      "summary": "论文《MAGE: Meta-Reinforcement Learning for Language Agents toward Strategic Exploration and Exploitation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03677v1::deepseek-reasoner::150": {
+      "summary": "论文《MIND: Unified Inquiry and Diagnosis RL with Criteria Grounded Clinical Supports for Psychiatric Consultation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03673v1::deepseek-reasoner::150": {
+      "summary": "论文《A Stein Identity for q-Gaussians with Bounded Support》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03672v1::deepseek-reasoner::150": {
+      "summary": "论文《Local Shapley: Model-Induced Locality and Optimal Reuse in Data Valuation》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03669v1::deepseek-reasoner::150": {
+      "summary": "论文《Automated Analysis of Ripple-Scale Gravity Wave Structures in the Mesosphere Using Convolutional Neural Networks》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03665v1::deepseek-reasoner::150": {
+      "summary": "针对面部识别系统滥用带来的隐私威胁，现有妆容迁移等方法存在黑盒可迁移性差",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03664v1::deepseek-reasoner::150": {
+      "summary": "本文研究部分可观测环境下多智能体联合学习通信与决策的范式化问题，提出基于信息结构理论的分析框架。通过将学习通信问题嵌入分散随机控制的公共信息框架，首次明确区分了准经典与非经典信息结构",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03662v1::deepseek-reasoner::150": {
+      "summary": "论文《Graph Negative Feedback Bias Correction Framework for Adaptive Heterophily Modeling》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03657v1::deepseek-reasoner::150": {
+      "summary": "论文《InEdit-Bench: Benchmarking Intermediate Logical Pathways for Intelligent Image Editing Models》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03655v1::deepseek-reasoner::150": {
+      "summary": "工具增强大语言模型智能体虽有望整合科学推理与计算，但在药物发现等高风险领域面临工具使用缺乏管控与长期可靠性不足两大",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03654v1::deepseek-reasoner::150": {
+      "summary": "论文《Field imaging framework for morphological characterization of aggregates with computer vision: Algorithms and applications》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03651v1::deepseek-reasoner::150": {
+      "summary": "论文《Freezing of Gait Prediction using Proactive Agent that Learns from Selected Experience and DDQN Algorithm》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03650v1::deepseek-reasoner::150": {
+      "summary": "本文研究如何从物理动力系统中高效提取信息以",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03644v1::deepseek-reasoner::150": {
+      "summary": "这篇论文针对教育游戏设计中教学意图与游戏机制难以可靠对接、且现有AI辅助工具决策不透明的难题，提出了一种基于受控自然语言框架的网页工具。该方法以语言为核心界面，让使用者与大语言模型助手通过四个互联组件共同构建一套结构化映射语言",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03637v1::deepseek-reasoner::150": {
+      "summary": "论文《Image-based Prompt Injection: Hijacking Multimodal LLMs through Visually Embedded Adversarial Instructions》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03633v1::deepseek-reasoner::150": {
+      "summary": "论文《Goal-Driven Risk Assessment for LLM-Powered Systems: A Healthcare Case Study》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03626v1::deepseek-reasoner::150": {
+      "summary": "论文《Riemannian Langevin Dynamics: Strong Convergence of Geometric Euler-Maruyama Scheme》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03621v1::deepseek-reasoner::150": {
+      "summary": "论文《Extending Neural Operators: Robust Handling of Functions Beyond the Training Set》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03613v1::deepseek-reasoner::150": {
+      "summary": "论文《Empirical Evaluation of No Free Lunch Violations in Permutation-Based Optimization》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03612v1::deepseek-reasoner::150": {
+      "summary": "论文《Why Are Linear RNNs More Parallelizable?》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03610v1::deepseek-reasoner::150": {
+      "summary": "论文《Riemannian Optimization in Modular Systems》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03597v1::deepseek-reasoner::150": {
+      "summary": "论文《NuMuon: Nuclear-Norm-Constrained Muon for Compressible LLM Training》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03596v1::deepseek-reasoner::150": {
+      "summary": "针对机器人执行复杂长周期任务时记忆机制单一的问题，本文提出了多尺度具身记忆模型（MEM）。该方法的核心创新在于融合多模态记忆：利用视频编码器压缩的",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
+    "2603.03595v1::deepseek-reasoner::150": {
+      "summary": "本文研究多智能体在空间异质性需求场景下的协同探索与服务问题，旨在克服纯模型方法缺乏自适应策略、深度强化学习方法样本效率低的局限。提出了混合信念强化学习框架：第一阶段基于对数高斯柯克斯过程构建空间信念，采用路径互信息规划器引导探索；第二阶段将控制权转移至软演员-评论",
+      "updated_at_utc": "2026-03-05T04:23:28+00:00"
+    },
     "2603.02992v1::deepseek-reasoner::150": {
       "summary": "论文《Kitaev model in a magnetic field: stable emergent structure, degenerate classical ground states, and reentrant topology》已完成抓取，但自动中文总结失败，请点击原文或 PDF 查看完整内容。",
       "updated_at_utc": "2026-03-04T12:18:29+00:00"
