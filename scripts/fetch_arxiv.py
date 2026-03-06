@@ -84,6 +84,41 @@ def is_chinese_dominant(text: str, min_ratio: float = 0.5, min_chars: int = 20) 
     return (chinese_count / total) >= min_ratio
 
 
+def chinese_char_count(text: str) -> int:
+    return len(re.findall(r"[\u4e00-\u9fff]", normalize_text(text)))
+
+
+def latin_char_count(text: str) -> int:
+    return len(re.findall(r"[A-Za-z]", normalize_text(text)))
+
+
+def has_terminal_punctuation(text: str) -> bool:
+    return normalize_text(text).endswith(("。", "！", "？", ".", "!", "?"))
+
+
+def is_summary_acceptable(text: str, target_chars: int, require_chinese: bool) -> bool:
+    clean = normalize_text(text)
+    if not clean:
+        return False
+    if "自动中文总结失败" in clean:
+        return False
+    if clean.endswith(("...", "…", "，", ",", "：", ":", "；", ";", "（", "(", "【", "[")):
+        return False
+    if len(clean) < max(32, int(target_chars * 0.35)):
+        return False
+    if require_chinese:
+        chinese_count = chinese_char_count(clean)
+        latin_count = latin_char_count(clean)
+        if chinese_count < max(20, int(target_chars * 0.18)):
+            return False
+        total = chinese_count + latin_count
+        if total == 0 or (chinese_count / total) < 0.72:
+            return False
+        if not has_terminal_punctuation(clean):
+            return False
+    return True
+
+
 def force_chinese_placeholder(title: str) -> str:
     clean_title = normalize_text(title)
     if not clean_title:
@@ -167,23 +202,27 @@ def llm_summary(
     if client is None:
         return fallback_summary(title, abstract, target_chars=target_chars)
 
+    clean_title = normalize_text(title)
+    clean_abstract = normalize_text(abstract)
+
     prompt = (
-        f"请用中文总结这篇 arXiv 论文，输出约 {target_chars} 字（允许 ±30 字），"
-        "重点说明研究问题、核心方法、关键结果与潜在影响。"
-        "请写成一段连贯文字，不使用序号。\n\n"
-        f"标题: {normalize_text(title)}\n"
-        f"摘要: {normalize_text(abstract)}"
+        "请基于给定标题和摘要，写一段完整的简体中文论文总结。\n"
+        f"硬性要求：1）只输出简体中文；2）长度控制在 {target_chars} 字左右（允许 ±30 字）；"
+        "3）必须在一段内交代研究问题、核心方法、主要结果和意义；"
+        "4）不能使用列表、标题或英文整句；5）必须以句号结尾，不要输出残句或省略号。\n\n"
+        f"标题: {clean_title}\n"
+        f"摘要: {clean_abstract}"
     )
 
     try:
         response = client.chat.completions.create(
             model=model,
             temperature=0.2,
-            max_tokens=220,
+            max_tokens=360,
             messages=[
                 {
                     "role": "system",
-                    "content": "你是科研助理，擅长快速提炼论文核心贡献并用中文简洁表达。",
+                    "content": "你是严谨的中文科研摘要助手，只输出一段完整、自然、准确的简体中文总结。",
                 },
                 {"role": "user", "content": prompt},
             ],
@@ -191,36 +230,36 @@ def llm_summary(
         text = ""
         if response.choices and response.choices[0].message:
             text = normalize_text(response.choices[0].message.content or "")
-        if not text:
-            text = fallback_summary(title, abstract, target_chars=target_chars)
-        if is_chinese_dominant(text):
+        if is_summary_acceptable(text, target_chars=target_chars, require_chinese=True):
             return text
 
-        # Second pass: force Chinese rewrite when first response is not Chinese enough.
-        rewrite_prompt = (
-            f"请将下面这段论文总结严格改写为中文，长度约 {target_chars} 字（允许 ±30 字），"
-            "不要保留英文句子，不要分点，输出单段落。\n\n"
-            f"标题: {normalize_text(title)}\n"
-            f"原总结: {text}\n"
-            f"原始摘要: {normalize_text(abstract)}"
+        repair_prompt = (
+            "上一版输出不合格，请重新生成并严格满足以下要求：\n"
+            "1）只输出一段完整的简体中文；\n"
+            f"2）长度约 {target_chars} 字（允许 ±30 字）；\n"
+            "3）必须明确写出研究问题、方法、主要结果和意义；\n"
+            "4）不要出现英文整句、列表、标题、残句或省略号；\n"
+            "5）必须以句号结尾。\n\n"
+            f"标题: {clean_title}\n"
+            f"摘要: {clean_abstract}"
         )
-        rewrite = client.chat.completions.create(
+        repair = client.chat.completions.create(
             model=model,
-            temperature=0.2,
-            max_tokens=260,
+            temperature=0.1,
+            max_tokens=420,
             messages=[
                 {
                     "role": "system",
-                    "content": "你只输出中文总结，不输出任何英文。",
+                    "content": "你只输出一段完整的简体中文论文总结，不输出任何解释或额外说明。",
                 },
-                {"role": "user", "content": rewrite_prompt},
+                {"role": "user", "content": repair_prompt},
             ],
         )
-        rewrite_text = ""
-        if rewrite.choices and rewrite.choices[0].message:
-            rewrite_text = normalize_text(rewrite.choices[0].message.content or "")
-        if rewrite_text and is_chinese_dominant(rewrite_text):
-            return rewrite_text
+        repair_text = ""
+        if repair.choices and repair.choices[0].message:
+            repair_text = normalize_text(repair.choices[0].message.content or "")
+        if is_summary_acceptable(repair_text, target_chars=target_chars, require_chinese=True):
+            return repair_text
         return force_chinese_placeholder(title)
     except Exception:
         fallback = fallback_summary(title, abstract, target_chars=target_chars)
@@ -248,11 +287,24 @@ def build_cache_key(paper_id: str, model: str, target_chars: int) -> str:
     return f"{normalized_id}::{normalized_model}::{target_chars}"
 
 
-def get_cached_summary(cache: dict[str, Any], cache_key: str) -> str | None:
+def get_cached_summary(
+    cache: dict[str, Any],
+    cache_key: str,
+    *,
+    target_chars: int,
+    require_chinese: bool,
+) -> str | None:
     item = cache.get("items", {}).get(cache_key, {})
     summary = item.get("summary", "")
-    if isinstance(summary, str) and summary.strip():
-        return summary.strip()
+    if isinstance(summary, str):
+        clean = normalize_text(summary)
+        if not clean:
+            return None
+        if require_chinese and not is_summary_acceptable(
+            clean, target_chars=target_chars, require_chinese=True
+        ):
+            return None
+        return clean
     return None
 
 
@@ -501,7 +553,12 @@ def run(args: argparse.Namespace) -> int:
         for paper in filtered:
             paper_id = paper.get("id", "")
             cache_key = build_cache_key(paper_id=paper_id, model=llm_model, target_chars=summary_target_chars)
-            cached = get_cached_summary(summary_cache, cache_key)
+            cached = get_cached_summary(
+                summary_cache,
+                cache_key,
+                target_chars=summary_target_chars,
+                require_chinese=llm_client is not None,
+            )
             if cached:
                 cache_hits += 1
                 paper["summary"] = cached
@@ -516,7 +573,10 @@ def run(args: argparse.Namespace) -> int:
                 target_chars=summary_target_chars,
             )
             paper["summary"] = summary
-            if paper_id:
+            if paper_id and (
+                llm_client is None
+                or is_summary_acceptable(summary, target_chars=summary_target_chars, require_chinese=True)
+            ):
                 set_cached_summary(summary_cache, cache_key, summary, now_utc)
 
         report["topics"].append(

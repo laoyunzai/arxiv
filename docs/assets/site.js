@@ -4,17 +4,23 @@ const state = {
   report: null,
   activeTopic: "all",
   keyword: "",
+  singleDate: "",
   dateFrom: "",
   dateTo: "",
+  availableDateMin: "",
+  availableDateMax: "",
   flatPapers: [],
 };
 
 const dom = {
   metaStrip: document.getElementById("metaStrip"),
   topicTabs: document.getElementById("topicTabs"),
+  quickDateButtons: document.getElementById("quickDateButtons"),
+  dateStatus: document.getElementById("dateStatus"),
   cards: document.getElementById("cards"),
   emptyState: document.getElementById("emptyState"),
   keywordInput: document.getElementById("keywordInput"),
+  singleDateInput: document.getElementById("singleDateInput"),
   dateFromInput: document.getElementById("dateFromInput"),
   dateToInput: document.getElementById("dateToInput"),
   clearDateFilter: document.getElementById("clearDateFilter"),
@@ -47,10 +53,51 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function parseFlexibleDate(input) {
+  if (!input) return null;
+  if (input instanceof Date) {
+    return Number.isNaN(input.getTime()) ? null : input;
+  }
+
+  const raw = String(input).trim();
+  const ymdMatch = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (ymdMatch) {
+    return new Date(Number(ymdMatch[1]), Number(ymdMatch[2]) - 1, Number(ymdMatch[3]), 12);
+  }
+
+  const parsed = new Date(raw);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function formatDateValue(date) {
+  return [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, "0"),
+    String(date.getDate()).padStart(2, "0"),
+  ].join("-");
+}
+
+function toLocalDateValue(input) {
+  const parsed = parseFlexibleDate(input);
+  if (parsed) {
+    return formatDateValue(parsed);
+  }
+  const match = String(input || "").match(/\d{4}-\d{2}-\d{2}/);
+  return match ? match[0] : "";
+}
+
+function shiftDateValue(ymd, days) {
+  const parsed = parseFlexibleDate(ymd);
+  if (!parsed) return "";
+  parsed.setDate(parsed.getDate() + days);
+  return formatDateValue(parsed);
+}
+
 function toDateLabel(input) {
-  if (!input) return "-";
-  const date = new Date(input);
-  if (Number.isNaN(date.getTime())) return String(input).slice(0, 10);
+  const date = parseFlexibleDate(input);
+  if (!date) {
+    return String(input || "-").slice(0, 10) || "-";
+  }
   return new Intl.DateTimeFormat("zh-CN", {
     year: "numeric",
     month: "2-digit",
@@ -58,10 +105,19 @@ function toDateLabel(input) {
   }).format(date);
 }
 
+function toQuickDateLabel(ymd) {
+  const date = parseFlexibleDate(ymd);
+  if (!date) return ymd;
+  return new Intl.DateTimeFormat("zh-CN", {
+    month: "2-digit",
+    day: "2-digit",
+    weekday: "short",
+  }).format(date);
+}
+
 function formatTimeWithZone(input) {
-  if (!input) return "-";
-  const date = new Date(input);
-  if (Number.isNaN(date.getTime())) return input;
+  const date = parseFlexibleDate(input);
+  if (!date) return String(input || "-");
   return new Intl.DateTimeFormat("zh-CN", {
     year: "numeric",
     month: "2-digit",
@@ -74,28 +130,26 @@ function formatTimeWithZone(input) {
 }
 
 function parseDateTime(input) {
-  const parsed = new Date(input || "");
-  return Number.isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+  const parsed = parseFlexibleDate(input);
+  return parsed ? parsed.getTime() : 0;
 }
 
-function toYmd(input) {
-  if (!input) return "";
-  const parsed = new Date(input);
-  if (!Number.isNaN(parsed.getTime())) {
-    return parsed.toISOString().slice(0, 10);
-  }
-  const match = String(input).match(/\d{4}-\d{2}-\d{2}/);
-  return match ? match[0] : "";
+function computeDateBounds(papers) {
+  const dates = papers.map((paper) => toLocalDateValue(paper.published)).filter(Boolean).sort();
+  return {
+    min: dates[0] || "",
+    max: dates[dates.length - 1] || "",
+  };
 }
 
 function passesDateFilter(paper) {
-  if (!state.dateFrom && !state.dateTo) {
-    return true;
-  }
-
-  const paperYmd = toYmd(paper.published);
+  const paperYmd = toLocalDateValue(paper.published);
   if (!paperYmd) {
     return false;
+  }
+
+  if (state.singleDate) {
+    return paperYmd === state.singleDate;
   }
 
   if (state.dateFrom && paperYmd < state.dateFrom) {
@@ -110,8 +164,15 @@ function passesDateFilter(paper) {
 }
 
 function updateDateInputLimits() {
-  dom.dateFromInput.max = state.dateTo || "";
-  dom.dateToInput.min = state.dateFrom || "";
+  const min = state.availableDateMin || "";
+  const max = state.availableDateMax || "";
+
+  dom.singleDateInput.min = min;
+  dom.singleDateInput.max = max;
+  dom.dateFromInput.min = min;
+  dom.dateToInput.max = max;
+  dom.dateFromInput.max = state.dateTo || max;
+  dom.dateToInput.min = state.dateFrom || min;
 }
 
 function setMetaStrip(report) {
@@ -167,6 +228,98 @@ function renderTopicTabs(report) {
 
     dom.topicTabs.appendChild(button);
   });
+}
+
+function buildQuickDateOptions() {
+  const base = state.availableDateMax || toLocalDateValue(state.report?.generated_at_utc || new Date());
+  if (!base) return [];
+  return [0, 1, 2].map((offset) => shiftDateValue(base, -offset)).filter(Boolean);
+}
+
+function renderQuickDateButtons() {
+  dom.quickDateButtons.innerHTML = "";
+
+  buildQuickDateOptions().forEach((ymd, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "quick-date-btn";
+    if (state.singleDate === ymd) {
+      button.classList.add("active");
+    }
+
+    const caption = document.createElement("span");
+    caption.className = "quick-date-caption";
+    caption.textContent = index === 0 ? "最新" : `近 ${index + 1} 天`;
+
+    const dateText = document.createElement("strong");
+    dateText.textContent = toQuickDateLabel(ymd);
+
+    button.append(caption, dateText);
+    button.addEventListener("click", () => {
+      if (state.singleDate === ymd) {
+        clearDateFilters();
+        return;
+      }
+      applySingleDateFilter(ymd);
+    });
+
+    dom.quickDateButtons.appendChild(button);
+  });
+}
+
+function renderDateStatus() {
+  if (state.singleDate) {
+    dom.dateStatus.textContent = `当前：仅显示 ${toDateLabel(state.singleDate)} 的论文`;
+    return;
+  }
+
+  if (state.dateFrom || state.dateTo) {
+    if (state.dateFrom && state.dateTo) {
+      dom.dateStatus.textContent = `当前：显示 ${toDateLabel(state.dateFrom)} 至 ${toDateLabel(state.dateTo)} 的论文`;
+      return;
+    }
+    if (state.dateFrom) {
+      dom.dateStatus.textContent = `当前：显示 ${toDateLabel(state.dateFrom)} 之后的论文`;
+      return;
+    }
+    dom.dateStatus.textContent = `当前：显示 ${toDateLabel(state.dateTo)} 之前的论文`;
+    return;
+  }
+
+  dom.dateStatus.textContent = "当前：显示全部日期的论文";
+}
+
+function syncDateControls() {
+  dom.singleDateInput.value = state.singleDate;
+  dom.dateFromInput.value = state.dateFrom;
+  dom.dateToInput.value = state.dateTo;
+  updateDateInputLimits();
+  renderQuickDateButtons();
+  renderDateStatus();
+}
+
+function applySingleDateFilter(ymd) {
+  state.singleDate = ymd || "";
+  state.dateFrom = "";
+  state.dateTo = "";
+  syncDateControls();
+  renderCards();
+}
+
+function applyRangeFilter(from, to) {
+  state.singleDate = "";
+  state.dateFrom = from || "";
+  state.dateTo = to || "";
+  syncDateControls();
+  renderCards();
+}
+
+function clearDateFilters() {
+  state.singleDate = "";
+  state.dateFrom = "";
+  state.dateTo = "";
+  syncDateControls();
+  renderCards();
 }
 
 function currentFilteredPapers() {
@@ -248,6 +401,7 @@ function closeDetailModal() {
 function renderCards() {
   const papers = currentFilteredPapers();
   dom.cards.innerHTML = "";
+  renderDateStatus();
 
   if (papers.length === 0) {
     dom.emptyState.classList.remove("hidden");
@@ -323,33 +477,35 @@ function bindEvents() {
     renderCards();
   });
 
-  dom.dateFromInput.addEventListener("change", (event) => {
-    state.dateFrom = event.target.value || "";
-    if (state.dateTo && state.dateFrom && state.dateTo < state.dateFrom) {
-      state.dateTo = state.dateFrom;
-      dom.dateToInput.value = state.dateTo;
+  dom.singleDateInput.addEventListener("change", (event) => {
+    const value = event.target.value || "";
+    if (!value) {
+      clearDateFilters();
+      return;
     }
-    updateDateInputLimits();
-    renderCards();
+    applySingleDateFilter(value);
+  });
+
+  dom.dateFromInput.addEventListener("change", (event) => {
+    let nextFrom = event.target.value || "";
+    let nextTo = state.dateTo;
+    if (nextTo && nextFrom && nextTo < nextFrom) {
+      nextTo = nextFrom;
+    }
+    applyRangeFilter(nextFrom, nextTo);
   });
 
   dom.dateToInput.addEventListener("change", (event) => {
-    state.dateTo = event.target.value || "";
-    if (state.dateFrom && state.dateTo && state.dateFrom > state.dateTo) {
-      state.dateFrom = state.dateTo;
-      dom.dateFromInput.value = state.dateFrom;
+    let nextTo = event.target.value || "";
+    let nextFrom = state.dateFrom;
+    if (nextFrom && nextTo && nextFrom > nextTo) {
+      nextFrom = nextTo;
     }
-    updateDateInputLimits();
-    renderCards();
+    applyRangeFilter(nextFrom, nextTo);
   });
 
   dom.clearDateFilter.addEventListener("click", () => {
-    state.dateFrom = "";
-    state.dateTo = "";
-    dom.dateFromInput.value = "";
-    dom.dateToInput.value = "";
-    updateDateInputLimits();
-    renderCards();
+    clearDateFilters();
   });
 
   dom.closePdf.addEventListener("click", closePdfModal);
@@ -408,10 +564,13 @@ async function bootstrap() {
 
     state.report = report;
     state.flatPapers = flattenPapers(report);
-    updateDateInputLimits();
+    const bounds = computeDateBounds(state.flatPapers);
+    state.availableDateMin = bounds.min;
+    state.availableDateMax = bounds.max;
 
     setMetaStrip(report);
     renderTopicTabs(report);
+    syncDateControls();
     renderCards();
   } catch (error) {
     renderError(error instanceof Error ? error.message : "未知错误");

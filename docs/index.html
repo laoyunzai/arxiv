@@ -48,11 +48,28 @@
         </div>
         <div class="date-wrap">
           <span class="topic-label">日期筛选</span>
-          <div class="date-fields">
-            <input id="dateFromInput" type="date" aria-label="开始日期" />
-            <span class="date-sep">至</span>
-            <input id="dateToInput" type="date" aria-label="结束日期" />
-            <button id="clearDateFilter" type="button" class="clear-date-btn">清空</button>
+          <div class="date-panel">
+            <div class="date-block">
+              <span class="date-subtitle">近三天</span>
+              <div id="quickDateButtons" class="quick-date-buttons"></div>
+            </div>
+            <div class="date-block">
+              <label for="singleDateInput" class="date-subtitle">单日直达</label>
+              <div class="single-date-row">
+                <input id="singleDateInput" type="date" aria-label="单日筛选" />
+                <p id="dateStatus" class="date-status">当前：显示全部日期的论文</p>
+              </div>
+            </div>
+            <div class="date-block">
+              <span class="date-subtitle">时间段</span>
+              <div class="date-fields">
+                <input id="dateFromInput" type="date" aria-label="开始日期" />
+                <span class="date-sep">至</span>
+                <input id="dateToInput" type="date" aria-label="结束日期" />
+                <button id="clearDateFilter" type="button" class="clear-date-btn">清空</button>
+              </div>
+            </div>
+            <p class="date-hint">点击某一天可直接查看当天论文；如需看连续日期，继续使用开始/结束日期筛选。</p>
           </div>
         </div>
       </section>

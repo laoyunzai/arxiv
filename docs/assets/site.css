@@ -148,6 +148,83 @@ body {
   grid-column: 1 / -1;
 }
 
+.date-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.date-block {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #ddd4c2;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 252, 246, 0.98) 0%, rgba(245, 248, 244, 0.92) 100%);
+}
+
+.date-subtitle {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent-strong);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.quick-date-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-date-btn {
+  border: 1px solid #c9d9d8;
+  background: #f8fcfb;
+  color: #214c4b;
+  border-radius: 14px;
+  padding: 9px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: start;
+  gap: 6px;
+  flex-direction: column;
+  min-width: 106px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.quick-date-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 22px rgba(18, 74, 73, 0.08);
+}
+
+.quick-date-btn.active {
+  background: linear-gradient(135deg, #0f4f4e 0%, #16706d 100%);
+  border-color: #0f4f4e;
+  color: #f4fffe;
+}
+
+.quick-date-caption {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.quick-date-btn strong {
+  font-size: 13px;
+}
+
+.single-date-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .date-fields {
   display: flex;
   align-items: center;
@@ -155,6 +232,7 @@ body {
   flex-wrap: wrap;
 }
 
+.single-date-row input[type="date"],
 .date-fields input[type="date"] {
   border: 1px solid #c6bda9;
   border-radius: 10px;
@@ -164,6 +242,7 @@ body {
   color: var(--text);
 }
 
+.single-date-row input[type="date"]:focus,
 .date-fields input[type="date"]:focus {
   outline: none;
   border-color: var(--accent);
@@ -190,6 +269,19 @@ body {
 .clear-date-btn:hover {
   border-color: var(--accent);
   color: var(--accent-strong);
+}
+
+.date-status {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.date-hint {
+  margin: 2px 2px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 .topic-btn {
@@ -559,6 +651,22 @@ body {
 
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .quick-date-btn {
+    min-width: calc(50% - 6px);
+  }
+
+  .single-date-row {
+    align-items: stretch;
+  }
+
+  .single-date-row input[type="date"] {
+    width: 100%;
+  }
+
+  .date-status {
+    width: 100%;
   }
 
   .pdf-panel {
